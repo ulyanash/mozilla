@@ -85,7 +85,7 @@
 }
 
 .wp-block-column.col-lg-6 {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .press-asset {

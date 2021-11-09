@@ -56,5 +56,15 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/press-asset'),
 		)
 	);
+	register_block_pattern(
+		'md/press-asset-cols',
+		array(
+			'title'         => esc_html__( 'Press Asset Cols' ),
+			'categories'    => array( 'md-press-asset' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Press Asset Cols', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/cols-2'),
+		)
+	);
 }
 
