@@ -21,6 +21,14 @@ Template Name: Press Assets Page
 
     <div class="page-section page-section--press-assets press-assets">
       <div class="container-fluid">
+<?php 
+/* Start the Loop */
+while ( have_posts() ) :
+	the_post();
+  the_content();
+
+endwhile; // End of the loop.
+?>
         <div class="row">
           <?php while(have_rows('featured_assets')): the_row(); ?>
             <div class="col-12 col-lg-<?php the_sub_field('column_width'); ?>">
