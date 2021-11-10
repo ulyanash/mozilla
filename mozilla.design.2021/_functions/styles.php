@@ -15,3 +15,4 @@ add_theme_support( 'editor-styles' );
 // Enqueue editor styles.
 add_editor_style( get_stylesheet_directory_uri().'/assets/css/style.css' );
 add_editor_style( get_stylesheet_directory_uri().'/assets/css/update.css' );
+add_editor_style( get_stylesheet_directory_uri().'/assets/css/admin.css' );

@@ -32,7 +32,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  * Register Block Patterns.
  */
 if ( function_exists( 'register_block_pattern' ) ) {
-	$viewportWidth = 1140;
+	$viewportWidth = '90%';
 
 	// Layout 2 cols
 	register_block_pattern(
@@ -58,3 +58,20 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	);
 }
 
+// ACF blocks
+function acf_asset_icon_block() {
+	if( function_exists('acf_register_block') ) {
+		// register a portfolio item block
+		acf_register_block(array(
+			'name'				=> 'asset-icon',
+			'title'				=> __('Asset Icons'),
+			'description'		=> __('A custom block for asset icons.'),
+			'render_template'	=> '_partials/block-patterns/press-assets/icons.php',
+			'category'			=> 'md-press-asset',
+			'icon'				=> 'excerpt-view',
+			'keywords'			=> array( 'portfolio' ),
+		));
+	}
+}
+
+// add_action('acf/init', 'acf_asset_icon_block');

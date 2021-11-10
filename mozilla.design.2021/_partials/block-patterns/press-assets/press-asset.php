@@ -4,8 +4,13 @@
 <h2 class="has-text-align-left type--h-md caption has-white-color has-text-color">Office Photos</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"white","className":"text type\u002d\u002dsm"} -->
-<p class="text type--sm has-white-color has-text-color"><a href="https://assets.mozilla.net/press/Mozilla_Offices.zip">Download .zip</a></p>
-<!-- /wp:paragraph --></div></div>
+<!-- wp:paragraph {"textColor":"white","className":"text type\u002d\u002dsm d-flex align-items-center justify-content-between text-color--light"} -->
+<p class="text type--sm has-white-color has-text-color d-flex align-items-center justify-content-between text-color--light">
+  <a href="https://assets.mozilla.net/press/Mozilla_Offices.zip">Download .zip</a>
+  <i class="icon icon--link"></i>
+</p>
+<!-- /wp:paragraph -->
+
+</div></div>
 <!-- /wp:cover --></div>
 <!-- /wp:group -->
