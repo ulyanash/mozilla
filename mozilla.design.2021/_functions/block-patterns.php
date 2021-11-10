@@ -45,6 +45,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/cols-2'),
 		)
 	);
+
 	// Press Asset
 	register_block_pattern(
 		'md/press-asset',
@@ -56,22 +57,47 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/press-asset'),
 		)
 	);
+
+	// Additional Press Asset 
+	register_block_pattern(
+		'md/additional-press-asset',
+		array(
+			'title'         => esc_html__( 'Additional Press Asset' ),
+			'categories'    => array( 'md-press-asset' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Additional Press Asset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/additional'),
+		)
+	);
 }
 
 // ACF blocks
-function acf_asset_icon_block() {
-	if( function_exists('acf_register_block') ) {
-		// register a portfolio item block
-		acf_register_block(array(
-			'name'				=> 'asset-icon',
-			'title'				=> __('Asset Icons'),
-			'description'		=> __('A custom block for asset icons.'),
-			'render_template'	=> '_partials/block-patterns/press-assets/icons.php',
-			'category'			=> 'md-press-asset',
-			'icon'				=> 'excerpt-view',
-			'keywords'			=> array( 'portfolio' ),
-		));
-	}
-}
+// function acf_asset_icon_block() {
+// 	if( function_exists('acf_register_block') ) {
+// 		// register a portfolio item block
+// 		acf_register_block(array(
+// 			'name'				=> 'asset-icon',
+// 			'title'				=> __('Asset Icons'),
+// 			'description'		=> __('A custom block for asset icons.'),
+// 			'render_template'	=> '_partials/block-patterns/press-assets/icons.php',
+// 			'category'			=> 'md-press-asset',
+// 			'icon'				=> 'excerpt-view',
+// 			'keywords'			=> array( 'portfolio' ),
+// 		));
+// 	}
+// }
 
 // add_action('acf/init', 'acf_asset_icon_block');
+
+/**
+ * Change code for press asset
+ */
+// add_filter( 'render_block', 'md_wrap_press_asset', 10, 2 );
+// function md_wrap_press_asset( $block_content, $block ) {
+// var_dump($block);
+// 	if ( 'md/press-asset' !== $block['blockName'] ) {
+// 		return $block_content;
+// 	}
+
+// 	return '<a href="#">'.$block_content.'</a>';
+// }
