@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Press Assets Page
+Template Name: Default Page
 */
 ?>
 <?php get_header(); ?>
@@ -19,7 +19,7 @@ Template Name: Press Assets Page
       </div>
     </div>
 
-    <div class="page-section page-section--press-assets press-assets">
+    <div class="page-section">
       <div class="container-fluid">
 <?php 
 /* Start the Loop */

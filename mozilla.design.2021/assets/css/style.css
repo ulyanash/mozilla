@@ -6537,6 +6537,9 @@ code {
     overflow: hidden;
     position: relative;
 }
+.card-listing .card .card--image {
+    margin-bottom: 0;
+}
 .card-listing .card .card--image .brand-interactive {
     height: 100%;
     left: 0;
@@ -6601,12 +6604,16 @@ code {
     width: 100%;
     z-index: 3;
 }
+.card-listing .card .card--content .wp-block-group__inner-container {
+    height: 100%;
+}
 @media (max-width: 1019px) {
     .card-listing .card .card--content {
         padding: 20px 0;
     }
 }
 .card-listing .card .card--content .container-fluid,
+.card-listing .card .card--content .container-fluid .wp-block-group__inner-container,
 .card-listing .card .card--content .row {
     height: 100%;
 }

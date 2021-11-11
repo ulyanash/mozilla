@@ -23,6 +23,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => esc_html__( 'Layout' ) )
 	);
 	register_block_pattern_category(
+		'md-home',
+		array( 'label' => esc_html__( 'Home' ) )
+	);
+	register_block_pattern_category(
 		'md-press-asset',
 		array( 'label' => esc_html__( 'Press Assets' ) )
 	);
@@ -54,7 +58,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'categories'    => array( 'md-press-asset' ),
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Press Asset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/press-asset'),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/press-asset'),
 		)
 	);
 
@@ -66,7 +70,18 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'categories'    => array( 'md-press-asset' ),
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Additional Press Asset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/press-assets/additional'),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/additional'),
+		)
+	);
+	// Home Block
+	register_block_pattern(
+		'md/home-block',
+		array(
+			'title'         => esc_html__( 'Home Block' ),
+			'categories'    => array( 'md-home' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Home Block', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/block'),
 		)
 	);
 }
