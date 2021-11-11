@@ -93,12 +93,22 @@
   min-height: 0 !important;
   padding-top: 106% !important;
 }
+.press-asset, .additional-asset {
+  position: relative;
+}
 .press-asset .wp-block-cover__inner-container {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.press-asset .wp-block-cover__inner-container a:hover {
-  text-decoration: none;
+.press-asset p.link a, .additional-asset p.link a {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  line-height: 0; 
+  font-size: 0;
+  color: transparent; 
+}
+.press-assets .press-asset .text.has-white-color .icon--external-link, .press-assets .press-asset .text.has-white-color .icon--link {
+  background-image: url('../images/icon-external-link-white.svg');
 }

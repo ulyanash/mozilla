@@ -2,6 +2,23 @@
   margin-left: auto;
   margin-right: auto;
 }
-.press-asset {
+.press-assets {
   padding-bottom: 0;
+}
+.press-asset p.link, .additional-asset p.link {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  flex-basis: 100%;
+  position: relative;
+}
+.press-asset p.link {
+  top: 100px;
+}
+.press-asset p.link a,  .additional-asset p.link a {
+  line-height: 1; 
+  font-size: 1.2rem;
+  color: #fff; 
+}
+.additional-assets .additional-asset > .wp-block-group__inner-container {
+  flex-wrap: wrap;
 }

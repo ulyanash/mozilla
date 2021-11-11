@@ -4,11 +4,14 @@
 <h2 class="has-text-align-left type--h-md caption has-white-color has-text-color">Office Photos</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"white","className":"text type\u002d\u002dsm d-flex align-items-center justify-content-between text-color--light"} -->
-<p class="text type--sm has-white-color has-text-color d-flex align-items-center justify-content-between text-color--light">
-  <a href="https://assets.mozilla.net/press/Mozilla_Offices.zip">Download .zip</a>
+<!-- wp:paragraph {"textColor":"white","className":"text type\u002d\u002dsm d-flex align-items-center justify-content-between has-white-color"} -->
+<p class="text type--sm has-white-color has-text-color d-flex align-items-center justify-content-between has-white-color">
+  Download .zip
   <i class="icon icon--link"></i>
 </p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"textColor":"white","className":"link has-white-color"} -->
+<p class="link has-white-color"><a href="https://assets.mozilla.net/press/Mozilla_Offices.zip">Link</a></p>
 <!-- /wp:paragraph -->
 
 </div></div>
