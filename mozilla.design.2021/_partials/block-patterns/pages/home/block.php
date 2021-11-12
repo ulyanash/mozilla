@@ -1,6 +1,6 @@
 <!-- wp:group {"className":"card-listing\u002d\u002dcard card"} -->
-<div class="wp-block-group card-listing--card card"><!-- wp:image {"id":1003,"sizeSlug":"large","linkDestination":"none","className":"card\u002d\u002dimage"} -->
-<figure class="wp-block-image size-large card--image"><img src="http://mozilla.test/wp-content/uploads/2019/06/Firefox-Homepage-Card-2-863x1024.png" alt="" class="wp-image-1003"/></figure>
+<div class="wp-block-group card-listing--card card"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"card\u002d\u002dimage"} -->
+<figure class="wp-block-image size-large card--image"><img src="https://mozilla.design/files/2019/06/Firefox-Homepage-Card.png" alt="" class=""/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"card\u002d\u002dcontent white"} -->
@@ -17,7 +17,7 @@
 
 <!-- wp:group {"className":"card\u002d\u002dmenu section-nav-menu style\u002d\u002dnormal type\u002d\u002dh-md type\u002d\u002dmb-h-xxs"} -->
 <div class="wp-block-group card--menu section-nav-menu style--normal type--h-md type--mb-h-xxs"><!-- wp:list {"ordered":true,"className":"menu"} -->
-<ol class="menu"><li><a href="https://mozilla.design/firefox/">About</a></li><li><a href="https://mozilla.design/firefox/personality/">Personality</a></li><li><a href="https://mozilla.design/firefox/logos-usage/">Logos &amp; Usage</a></li><li><a href="https://mozilla.design/firefox/color/">Color</a></li><li><a href="https://mozilla.design/firefox/visuals/">Visuals</a></li><li><a href="https://mozilla.design/firefox/typography/">Typography</a></li><li></li></ol>
+<ol class="menu"><li><a href="https://mozilla.design/firefox/">About</a></li><li><a href="https://mozilla.design/firefox/personality/">Personality</a></li><li><a href="https://mozilla.design/firefox/logos-usage/">Logos &amp; Usage</a></li><li><a href="https://mozilla.design/firefox/color/">Color</a></li><li><a href="https://mozilla.design/firefox/visuals/">Visuals</a></li><li><a href="https://mozilla.design/firefox/typography/">Typography</a></li></ol>
 <!-- /wp:list --></div>
 <!-- /wp:group -->
 

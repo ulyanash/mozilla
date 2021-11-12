@@ -84,6 +84,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/block'),
 		)
 	);
+	// Home Blocks Row
+	register_block_pattern(
+		'md/home-blocks-row',
+		array(
+			'title'         => esc_html__( 'Home Blocks Row' ),
+			'categories'    => array( 'md-home' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Home Blocks Row', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/blocks-row'),
+		)
+	);
 }
 
 // ACF blocks
