@@ -4,7 +4,15 @@
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"card\u002d\u002dcontent white"} -->
-<div class="wp-block-group card--content white"><!-- wp:group {"className":"container-fluid"} -->
+<div class="wp-block-group card--content white">
+
+<!-- wp:paragraph {"textColor":"white","className":"link"} -->
+<p class="link has-white-color has-text-color">
+  <a href="https://mozilla.design/firefox/" class="card-title">Link</a>
+</p>
+<!-- /wp:paragraph -->  
+
+<!-- wp:group {"className":"container-fluid"} -->
 <div class="wp-block-group container-fluid"><!-- wp:columns {"className":"row"} -->
 <div class="wp-block-columns row"><!-- wp:column {"className":"col-12 d-flex flex-column"} -->
 <div class="wp-block-column col-12 d-flex flex-column"><!-- wp:heading {"className":"type\u002d\u002dh-lg type\u002d\u002dmb-h-lg"} -->
@@ -25,14 +33,11 @@
 <p class="card--tagline mt-auto type--h-sm type--mb-h-xs">Firefox fights for you</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"textColor":"white","className":"link"} -->
-<p class="link has-white-color has-text-color">
-  <a href="https://mozilla.design/firefox/">Link</a>
-</p>
-<!-- /wp:paragraph -->
 </div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+</div>
 <!-- /wp:group -->

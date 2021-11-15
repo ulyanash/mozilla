@@ -24,9 +24,9 @@ p.link, .press-asset p.link, .additional-asset p.link {
   display: none;
 }
 p.link a, .press-asset p.link a,  .additional-asset p.link a {
-  line-height: 1; 
-  font-size: 1.2rem;
-  color: #fff; 
+  line-height: 1 !important; 
+  font-size: 1.2rem !important;
+  color: #fff !important; 
 }
 .additional-assets .additional-asset > .wp-block-group__inner-container {
   flex-wrap: wrap;
@@ -46,6 +46,7 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
   margin: 30px 0 0;
   padding: 0;
   overflow-y: auto;
+  height: auto;
 }
 .card-listing .card h2 {
   max-width: 100%;

@@ -5,7 +5,7 @@ Template Name: Home Page
 ?>
 <?php get_header(); ?>
 
-<div class="page-section page-section--card-listing card-listing">
+<div class="page-section page-section--card-listing ">
   <div class="container-fluid">
 
 <?php 

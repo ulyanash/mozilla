@@ -6737,7 +6737,8 @@ code {
     background: transparent;
 }
 .card-listing .card .card--content.white .card--tagline,
-.card-listing .card .card--content.white h2 {
+.card-listing .card .card--content.white h2,
+.card-listing .card .card--content.white figure {
     color: #ffffff;
     z-index: 3;
 }
@@ -6765,7 +6766,7 @@ code {
     }
 }
 .card-listing .card--menu ol {
-counter-reset: items;
+    counter-reset: items;
 }
 .card-listing .card--menu ol li {
     display: block;
@@ -6773,10 +6774,12 @@ counter-reset: items;
 }
 .card-listing .card--menu ol li:before {
     content: "0" counter(items)" ";
+    position: relative;
+    z-index: 3;
 }
 .card-listing .card--menu a {
     position: relative;
-    z-index: 2;
+    z-index: 12;
 }
 .card-listing .card--menu .count,
 .card-listing .card--menu li:before {
@@ -9045,12 +9048,16 @@ body.error404 .site-header {
 .press-assets .col-lg-6 .press-asset {
     padding-top: 106%;
 }
-.press-asset p.link a, .additional-asset p.link a {
+p.link {
+    margin: 0;
+}
+.press-asset p.link a, .additional-asset p.link a, .card p.link a {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     line-height: 0; 
     font-size: 0;
     color: transparent; 
+    z-index: 10;
 }
 .press-assets .press-asset .text.has-white-color .icon--external-link, .press-assets .press-asset .text.has-white-color .icon--link {
     background-image: url('../images/icon-external-link-white.svg');
