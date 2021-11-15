@@ -73,17 +73,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/additional'),
 		)
 	);
-	// Home Block
-	register_block_pattern(
-		'md/home-block',
-		array(
-			'title'         => esc_html__( 'Home Block' ),
-			'categories'    => array( 'md-home' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Home Block', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/block'),
-		)
-	);
 	// Home Blocks Row
 	register_block_pattern(
 		'md/home-blocks-row',

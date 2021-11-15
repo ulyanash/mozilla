@@ -2,10 +2,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+.wp-block.wp-block-columns {
+  max-width: 100%;
+}
 .press-assets {
   padding-bottom: 0;
 }
-.press-asset p.link, .additional-asset p.link {
+p.link, .press-asset p.link, .additional-asset p.link {
   background: rgba(0,0,0,0.5);
   padding: 10px;
   flex-basis: 100%;
@@ -14,14 +17,52 @@
 .press-asset p.link {
   top: 100px;
 }
+.card p.link {
+  flex-basis: 0;
+}
 .press-asset .block-list-appender,  .additional-asset .block-list-appender {
   display: none;
 }
-.press-asset p.link a,  .additional-asset p.link a {
+p.link a, .press-asset p.link a,  .additional-asset p.link a {
   line-height: 1; 
   font-size: 1.2rem;
   color: #fff; 
 }
 .additional-assets .additional-asset > .wp-block-group__inner-container {
   flex-wrap: wrap;
+}
+.card-listing .card .card--content .row {
+  margin: 0;
+}
+.card-listing .card-col:nth-child(even) {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.card-listing .card .container-fluid {
+  margin: 0;
+}
+.card-listing .card .card--content {
+  margin: 30px 0 0;
+  padding: 0;
+  overflow-y: auto;
+}
+.card-listing .card h2 {
+  max-width: 100%;
+}
+.card-listing .card--menu {
+  opacity: 1;
+}
+.card-listing .card--menu ol {
+  padding: 0;
+}
+.section-nav-menu ol li {
+  margin-bottom: 0;
+}
+.card-listing .card--menu.section-nav-menu.style--mozilla a:hover {
+  font-family: inherit;
+  font-size: inherit;
+}
+.card-listing .card--tagline {
+  margin-top: 60px !important;
 }

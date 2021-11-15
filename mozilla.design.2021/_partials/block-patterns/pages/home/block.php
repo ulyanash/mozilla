@@ -22,8 +22,15 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"className":"card\u002d\u002dtagline mt-auto type\u002d\u002dh-sm type\u002d\u002dmb-h-xs"} -->
-<p class="card--tagline mt-auto type--h-sm type--mb-h-xs"><br>Firefox fights for you</p>
-<!-- /wp:paragraph --></div>
+<p class="card--tagline mt-auto type--h-sm type--mb-h-xs">Firefox fights for you</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"white","className":"link"} -->
+<p class="link has-white-color has-text-color">
+  <a href="https://mozilla.design/firefox/">Link</a>
+</p>
+<!-- /wp:paragraph -->
+</div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group --></div>
