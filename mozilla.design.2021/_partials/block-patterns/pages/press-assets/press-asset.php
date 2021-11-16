@@ -5,7 +5,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"white","className":"text type\u002d\u002dsm d-flex align-items-center justify-content-between has-white-color"} -->
-<p class="text type--sm has-white-color has-text-color d-flex align-items-center justify-content-between has-white-color">
+<p class="text text--link type--sm has-white-color has-text-color d-flex align-items-center justify-content-between has-white-color">
   Download .zip
   <i class="icon icon--link"></i>
 </p>

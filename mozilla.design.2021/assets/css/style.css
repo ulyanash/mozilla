@@ -5750,15 +5750,23 @@ body.in-transition {
     height: 18px;
     width: 18px;
 }
+.text--link:after,
+.text--download:after {
+    content: '';
+    position: absolute;
+    right: 0;
+}
 .icon--external-link,
-.icon--link {
+.icon--link,
+.text--link:after {
     background: url("../images/icon-external-link.svg") no-repeat transparent 50% 50%;
     background-size: contain;
     display: inline-block;
     height: 18px;
     width: 18px;
 }
-.icon--download {
+.icon--download,
+.text--download:after {
     background: url("../images/download-black.svg") no-repeat transparent 50% 50%;
     background-size: contain;
     display: inline-block;
@@ -8901,7 +8909,7 @@ body.error404 .site-header {
 .design-tools {
     padding-bottom: 50px;
 }
-.design-tools .design-asset {
+.design-asset {
     border-radius: 10px;
     -webkit-box-shadow: 0 2px 8px rgba(12,12,13,0.1);
     box-shadow: 0 2px 8px rgba(12,12,13,0.1);
@@ -8911,26 +8919,26 @@ body.error404 .site-header {
     position: relative;
     width: 100%;
 }
-.design-tools .design-asset .content {
+.design-asset .content {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
 }
-.design-tools .design-asset .content a {
+.design-asset .content a {
     display: block;
     height: 100%;
     width: 100%;
 }
-.design-tools .design-asset .text {
+.design-asset .text {
     bottom: 12px;
     left: 20px;
     position: absolute;
     right: 20px;
 }
-.design-tools .design-asset .image,
-.design-tools .design-asset .image noscript {
+.design-asset .image,
+.design-asset .image noscript {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -8946,10 +8954,13 @@ body.error404 .site-header {
     top: 0;
     width: 100%;
 }
-.design-tools .design-asset .image img,
-.design-tools .design-asset .image noscript img,
-.design-tools .design-asset .image noscript img,
-.design-tools .design-asset .image noscript noscript img {
+.design-asset .image figcaption {
+    display: none;
+}
+.design-asset .image img,
+.design-asset .image noscript img,
+.design-asset .image noscript img,
+.design-asset .image noscript noscript img {
     height: auto;
     width: 50%;
 }
@@ -9015,11 +9026,10 @@ body.error404 .site-header {
 .press-assets .press-asset .text.text-color--light {
     color: #ffffff;
 }
-.press-assets .press-asset .text.text-color--light .icon--download {
+.text--download.has-white-color:after {
     background-image: url("../images/download-white.svg");
 }
-.press-assets .press-asset .text.text-color--light .icon--external-link,
-.press-assets .press-asset .text.text-color--light .icon--link {
+.text--link.has-white-color:after {
     background-image: url("../images/icon-external-link-white.svg");
 }
 .press-assets .press-asset .image {
@@ -9051,7 +9061,7 @@ body.error404 .site-header {
 p.link {
     margin: 0;
 }
-.press-asset p.link a, .additional-asset p.link a, .card p.link a {
+.press-asset p.link a, .additional-asset p.link a, .card p.link a, .design-asset p.link a {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     line-height: 0; 
@@ -9059,7 +9069,7 @@ p.link {
     color: transparent; 
     z-index: 10;
 }
-.press-assets .press-asset .text.has-white-color .icon--external-link, .press-assets .press-asset .text.has-white-color .icon--link {
+.press-assets .press-asset .text--link.has-white-color:after {
     background-image: url('../images/icon-external-link-white.svg');
 }
 .additional-assets-row {

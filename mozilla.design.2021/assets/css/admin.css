@@ -13,6 +13,10 @@ p.link, .press-asset p.link, .additional-asset p.link {
   padding: 10px;
   flex-basis: 100%;
   position: relative;
+  white-space: normal !important;
+}
+p.link a {
+  position: relative !important;
 }
 .press-asset p.link {
   top: 100px;
@@ -66,4 +70,8 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
 }
 .card-listing .card--tagline {
   margin-top: 60px !important;
+}
+
+.design-asset .wp-block-group__inner-container {
+  position: unset;
 }

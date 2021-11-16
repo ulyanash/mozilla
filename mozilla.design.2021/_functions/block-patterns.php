@@ -30,6 +30,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		'md-press-asset',
 		array( 'label' => esc_html__( 'Press Assets' ) )
 	);
+	register_block_pattern_category(
+		'md-resources',
+		array( 'label' => esc_html__( 'Resources' ) )
+	);
 }
 
 /**
@@ -73,6 +77,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/additional'),
 		)
 	);
+
 	// Home Blocks Row
 	register_block_pattern(
 		'md/home-blocks-row',
@@ -82,6 +87,18 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Home Blocks Row', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/blocks-row'),
+		)
+	);
+
+	// Resources
+	register_block_pattern(
+		'md/resource',
+		array(
+			'title'         => esc_html__( 'Resource Item' ),
+			'categories'    => array( 'md-resources' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Resource Item', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/resources/resource'),
 		)
 	);
 }
