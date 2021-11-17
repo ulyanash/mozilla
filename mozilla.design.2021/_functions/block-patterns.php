@@ -27,6 +27,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => esc_html__( 'Home' ) )
 	);
 	register_block_pattern_category(
+		'md-page',
+		array( 'label' => esc_html__( 'Page' ) )
+	);
+	register_block_pattern_category(
 		'md-press-asset',
 		array( 'label' => esc_html__( 'Press Assets' ) )
 	);
@@ -99,6 +103,54 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Resource Item', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/resources/resource'),
+		)
+	);
+
+	// Page Heading
+	register_block_pattern(
+		'md/page-heading',
+		array(
+			'title'         => esc_html__( 'Page Heading' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Page Heading', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/heading'),
+		)
+	);
+
+	// Page Section with Left Offset
+	register_block_pattern(
+		'md/page-section-offset-left',
+		array(
+			'title'         => esc_html__( 'Section with Left Offset' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Left Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-offset-left'),
+		)
+	);
+
+	// Page Section with Right Offset
+	register_block_pattern(
+		'md/page-section-offset-right',
+		array(
+			'title'         => esc_html__( 'Section with Right Offset' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Right Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-offset-right'),
+		)
+	);
+
+	// Page Section with 2 columns
+	register_block_pattern(
+		'md/page-section-2-cols',
+		array(
+			'title'         => esc_html__( 'Section with 2 columns' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with 2 columns', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-2-cols'),
 		)
 	);
 }

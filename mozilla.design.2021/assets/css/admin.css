@@ -75,3 +75,8 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
 .design-asset .wp-block-group__inner-container {
   position: unset;
 }
+
+.page-intro {
+  min-height: 0;
+  height: auto;
+}
