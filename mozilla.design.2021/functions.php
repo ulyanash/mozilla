@@ -3,7 +3,7 @@ require_once('_functions/styles.php');
 require_once('_functions/scripts.php');
 require_once('_functions/menus.php');
 require_once('_functions/helpers.php');
-require_once('_functions/colors.php');
+require_once('_functions/block-editor.php');
 require_once('_functions/block-patterns.php');
 
 function mozilla_design_mime_types($mimes) {

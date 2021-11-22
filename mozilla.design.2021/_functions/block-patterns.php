@@ -23,6 +23,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => esc_html__( 'Layout' ) )
 	);
 	register_block_pattern_category(
+		'md-spacers',
+		array( 'label' => esc_html__( 'Spacers' ) )
+	);
+	register_block_pattern_category(
 		'md-home',
 		array( 'label' => esc_html__( 'Home' ) )
 	);
@@ -44,17 +48,29 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  * Register Block Patterns.
  */
 if ( function_exists( 'register_block_pattern' ) ) {
-	$viewportWidth = '90%';
+	$viewportWidth = '98%';
 
 	// Layout 2 cols
+	// register_block_pattern(
+	// 	'md/two-cols',
+	// 	array(
+	// 		'title'         => esc_html__( 'Two columns' ),
+	// 		'categories'    => array( 'md-layout' ),
+	// 		'viewportWidth' => $viewportWidth,
+	// 		'description'   => esc_html_x( 'Two columns', 'Block pattern description' ),
+	// 		'content'       => md_return_get_template_part( '_partials/block-patterns/layout/cols-2'),
+	// 	)
+	// );
+
+	// Spacers
 	register_block_pattern(
 		'md/two-cols',
 		array(
-			'title'         => esc_html__( 'Two columns' ),
-			'categories'    => array( 'md-layout' ),
+			'title'         => esc_html__( 'Spacer Large' ),
+			'categories'    => array( 'md-spacers' ),
 			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Two columns', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/cols-2'),
+			'description'   => esc_html_x( 'Spacer Large', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-lg'),
 		)
 	);
 

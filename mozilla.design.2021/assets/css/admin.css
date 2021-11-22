@@ -35,6 +35,10 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
 .additional-assets .additional-asset > .wp-block-group__inner-container {
   flex-wrap: wrap;
 }
+.card-listing {
+  padding-top: 0;
+  margin-top: 0;
+}
 .card-listing .card .card--content .row {
   margin: 0;
 }
@@ -79,4 +83,5 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
 .page-intro {
   min-height: 0;
   height: auto;
+  padding: 0;
 }

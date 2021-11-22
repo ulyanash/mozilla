@@ -1807,6 +1807,14 @@ button.bg-dark:hover {
 .mx-5 {
     margin-left: 3rem !important;
 }
+.mt-7,
+.my-7 {
+    margin-top: 7.5rem !important;
+}
+.mb-7,
+.my-7 {
+    margin-bottom: 7.5rem !important;
+}
 .p-0 {
     padding: 0 !important;
 }
@@ -6075,6 +6083,7 @@ a:visited {
     color: #ffffff;
 }
 .type--ff-h-mega,
+.has-h-mega-font-size,
 .type--h-mega {
     font-size: 152px;
     letter-spacing: 0;
@@ -6084,6 +6093,7 @@ a:visited {
     font-style: normal;
 }
 .type--ff-h-xxl,
+.has-h-xxl-font-size,
 .type--h-xxl {
     font-size: 64px;
     letter-spacing: 0;
@@ -6100,6 +6110,7 @@ a:visited {
     }
 }
 .type--ff-h-xl,
+.has-h-xl-font-size,
 .type--h-xl {
     font-size: 56px;
     letter-spacing: 0;
@@ -6109,6 +6120,7 @@ a:visited {
     font-style: normal;
 }
 .type--ff-h-lg,
+.has-h-lg-font-size,
 .type--h-lg {
     font-size: 48px;
     letter-spacing: 0;
@@ -6122,6 +6134,7 @@ a:visited {
 .parent--mozilla .section-nav-menu li:before,
 .section-nav-menu.style--normal li:before,
 .type--ff-h-md,
+.has-h-md-font-size,
 .type--h-md {
     font-size: 40px;
     letter-spacing: 0;
@@ -6136,6 +6149,7 @@ a:visited {
 }
 .section-nav-menu ul .count,
 .type--ff-h-sm,
+.has-h-sm-font-size,
 .type--h-sm {
     font-size: 32px;
     letter-spacing: 0;
@@ -6145,6 +6159,7 @@ a:visited {
     font-style: normal;
 }
 .type--ff-h-xs,
+.has-h-xs-font-size,
 .type--h-xs {
     font-size: 24px;
     letter-spacing: 0;
@@ -6154,6 +6169,7 @@ a:visited {
     font-style: normal;
 }
 .type--ff-h-xxs,
+.has-h-xxs-font-size,
 .type--h-xxs {
     font-size: 20px;
     letter-spacing: 0;
@@ -6164,6 +6180,7 @@ a:visited {
 }
 .site-footer .legal img+p > a,
 .type--ff-h-xxxs,
+.has-h-xxxs-font-size,
 .type--h-xxxs {
     font-size: 16px;
     letter-spacing: 0;
@@ -6173,23 +6190,27 @@ a:visited {
     font-style: normal;
 }
 .type--ff-lg,
+.has-lg-font-size,
 .type--lg {
     font-size: 18px;
     letter-spacing: 0;
     line-height: 28px;
 }
+.has-md-font-size,
 .type--ff-md {
     font-size: 16px;
     letter-spacing: 0;
     line-height: 24px;
 }
 .type--ff-sm,
+.has-sm-font-size,
 .type--sm {
     font-size: 14px;
     letter-spacing: 0;
     line-height: 22px;
 }
 .type--ff-xs,
+.has-xs-font-size,
 .type--xs {
     font-size: 12px;
     letter-spacing: 0;
@@ -6208,6 +6229,7 @@ a:visited {
         font-style: normal;
     }
     .tagline .type--h-xxl,
+    .tagline .has-h-xxl-font-size,
     .type--ff-mb-h-md,
     .type--mb-h-md,
     .wysiwyg-content .type--h-md {
@@ -6271,6 +6293,7 @@ a:visited {
     }
 }
 .parent--mozilla .type--h-mega,
+.parent--mozilla .has-h-mega-font-size,
 .type--mz-h-mega {
     font-size: 180px;
     letter-spacing: 0;
@@ -6291,6 +6314,7 @@ a:visited {
     line-height: 220px;
 }
 .parent--mozilla .type--h-xxl,
+.parent--mozilla .has-h-xxl-font-size,
 .type--mz-h-xxl {
     font-size: 76px;
     letter-spacing: 0;
@@ -6305,6 +6329,7 @@ a:visited {
     line-height: 120px;
 }
 .parent--mozilla .type--h-xl,
+.parent--mozilla .has-h-xl-font-size,
 .type--mz-h-xl {
     font-size: 66px;
     letter-spacing: 0;
@@ -6314,6 +6339,7 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--h-lg,
+.parent--mozilla .has-h-lg-font-size,
 .type--mz-h-lg {
     font-size: 56px;
     letter-spacing: 0;
@@ -6331,6 +6357,7 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--h-md,
+.parent--mozilla .has-h-md-font-size,
 .type--mz-h-md {
     font-size: 48px;
     letter-spacing: 0;
@@ -6350,6 +6377,7 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--h-sm,
+.parent--mozilla .has-h-sm-font-size,
 .type--mz-h-sm {
     font-size: 38px;
     letter-spacing: 0;
@@ -6370,6 +6398,7 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--h-xs,
+.parent--mozilla .has-h-xs-font-size,
 .type--mz-h-xs {
     font-size: 28px;
     letter-spacing: 0;
@@ -6379,6 +6408,7 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--h-xxs,
+.parent--mozilla .has-h-xxs-font-size,
 .type--mz-h-xxs {
     font-size: 24px;
     letter-spacing: 0;
@@ -6397,6 +6427,7 @@ a:visited {
 }
 .parent--mozilla .site-footer .legal img+p > a,
 .parent--mozilla .type--h-xxxs,
+.parent--mozilla .has-h-xxxs-font-size,,
 .site-footer .legal .parent--mozilla img+p > a,
 .type--mz-h-xxxs {
     font-size: 18px;
@@ -6415,23 +6446,27 @@ a:visited {
     font-style: normal;
 }
 .parent--mozilla .type--lg,
+.parent--mozilla .has-lg-font-size,
 .type--mz-lg {
     font-size: 18px;
     letter-spacing: 0;
     line-height: 26px;
 }
+.has-md-font-size
 .type--mz-md {
     font-size: 16px;
     letter-spacing: 0;
     line-height: 22px;
 }
 .parent--mozilla .type--sm,
+.parent--mozilla .has-sm-font-size,
 .type--mz-sm {
     font-size: 14px;
     letter-spacing: 0;
     line-height: 20px;
 }
 .parent--mozilla .type--xs,
+.parent--mozilla .has-xs-font-size,
 .type--mz-xs {
     font-size: 12px;
     letter-spacing: 0;
