@@ -8104,6 +8104,9 @@ body.error404 .site-header {
     min-height: 500px;
     width: 100%;
 }
+.page-intro .wp-block-group__inner-container {
+    height: 100%;
+}
 @media (max-width: 1019px) {
     .page-intro {
         min-height: 400px;
@@ -8463,6 +8466,7 @@ body.error404 .site-header {
     position: relative;
     width: 100%;
 }
+.asset .thumbnail .wp-block-group__inner-container { position: unset; }
 .asset .thumbnail .content,
 .asset .thumbnail .content noscript {
     -webkit-box-align: center;
@@ -8487,6 +8491,7 @@ body.error404 .site-header {
 .asset .thumbnail .content img,
 .asset .thumbnail .content noscript img {
     max-width: 60%;
+    height: auto;
 }
 .asset .thumbnail+.text-wrap {
     bottom: 0;
@@ -8507,8 +8512,13 @@ body.error404 .site-header {
     justify-content: space-between;
     padding: 15px 20px;
 }
+.asset .text-wrap .wp-block-group__inner-container {
+    width: 100%;
+    position: relative;
+}
 .asset .text-wrap .text {
     padding: 0;
+    margin-bottom: 0;
 }
 .asset .text-wrap .icon {
     background: url("../images/icon-external-link.svg") no-repeat transparent 50% 50%;
@@ -8953,6 +8963,7 @@ body.error404 .site-header {
     -webkit-box-shadow: 0 2px 8px rgba(12,12,13,0.1);
     box-shadow: 0 2px 8px rgba(12,12,13,0.1);
     height: 0;
+    color: #000;
     margin-bottom: 30px;
     padding-top: 100%;
     position: relative;
@@ -8993,7 +9004,8 @@ body.error404 .site-header {
     top: 0;
     width: 100%;
 }
-.design-asset .image figcaption {
+.design-asset .image figcaption,
+.asset .thumbnail figcaption {
     display: none;
 }
 .design-asset .image img,
@@ -9100,7 +9112,7 @@ body.error404 .site-header {
 p.link {
     margin: 0;
 }
-.press-asset p.link a, .additional-asset p.link a, .card p.link a, .design-asset p.link a {
+.press-asset p.link a, .additional-asset p.link a, .card p.link a, .design-asset p.link a, .asset p.link a {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     line-height: 0; 

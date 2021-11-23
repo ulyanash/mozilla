@@ -79,6 +79,10 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
 .design-asset .wp-block-group__inner-container {
   position: unset;
 }
+.design-asset .components-resizable-box__container,
+.asset .components-resizable-box__container {
+  max-width: 100% !important;
+}
 
 .page-intro {
   min-height: 0;

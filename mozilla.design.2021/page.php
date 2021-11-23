@@ -43,11 +43,11 @@ endwhile; // End of the loop.
 
 <?php if( get_field('custom_bumper') ): ?>
 
-  <?php //include('_partials/_block--bumper-custom.php'); ?>
+  <?php include('_partials/_block--bumper-custom.php'); ?>
 
 <?php else : ?>
 
-  <?php //include('_partials/_block--bumper.php'); ?>
+  <?php include('_partials/_block--bumper.php'); ?>
 
 <?php endif; ?>
 

@@ -193,6 +193,30 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-2-cols'),
 		)
 	);
+
+	// Page Asset
+	register_block_pattern(
+		'md/page-asset',
+		array(
+			'title'         => esc_html__( 'Page Asset' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Page Asset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/asset'),
+		)
+	);
+
+	// Page Asset Without Image
+	register_block_pattern(
+		'md/page-asset-no-image',
+		array(
+			'title'         => esc_html__( 'Page Asset Without Image' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Page Asset Without Image', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/asset-no-image'),
+		)
+	);
 }
 
 // ACF blocks
