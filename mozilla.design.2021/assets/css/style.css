@@ -84,8 +84,15 @@
     color: #e7e5e2 !important;
 }
 
+.wp-block-columns {
+    margin-bottom: 0;
+}
 .wp-block-column.col-lg-6 {
     margin-left: 0 !important;
+}
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 .align-baseline {
@@ -8752,7 +8759,8 @@ body.error404 .site-header {
 .section-intro {
     margin-bottom: 30px;
 }
-.standard-section img {
+.standard-section img,
+figure.w-100 img {
     height: auto;
     width: 100%;
 }

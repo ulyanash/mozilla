@@ -16,8 +16,8 @@
     </div>
     <!-- /wp:column -->
 
-    <!-- wp:column {"width":"100%","className":"col col-lg-5 offset-none offset-lg-1 text-content"} -->
-    <div class="wp-block-column col col-lg-5 offset-none offset-lg-1 text-content" style="flex-basis:100%">
+    <!-- wp:column {"width":"100%","className":"col col-lg-5 offset-none offset-lg-2 text-content"} -->
+    <div class="wp-block-column col col-lg-5 offset-none offset-lg-2 text-content" style="flex-basis:100%">
         <!-- wp:paragraph {"className":"type--h-xs"} -->
         <p class="type--h-xs">Don’t</p>
         <!-- /wp:paragraph -->

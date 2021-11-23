@@ -64,7 +64,37 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 	// Spacers
 	register_block_pattern(
-		'md/two-cols',
+		'md/spacer-xs',
+		array(
+			'title'         => esc_html__( 'Spacer XS' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer XS', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-xs'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-s',
+		array(
+			'title'         => esc_html__( 'Spacer Small' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer Small', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-s'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-m',
+		array(
+			'title'         => esc_html__( 'Spacer Medium' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer Mediuml', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-m'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-lg',
 		array(
 			'title'         => esc_html__( 'Spacer Large' ),
 			'categories'    => array( 'md-spacers' ),
@@ -184,6 +214,16 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
 	// Page Section with 2 columns
 	register_block_pattern(
+		'md/page-section-2-cols-offset-l',
+		array(
+			'title'         => esc_html__( 'Section with 2 columns with big gap' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with 2 columns with big gap', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-2-cols-offset-l'),
+		)
+	);
+	register_block_pattern(
 		'md/page-section-2-cols',
 		array(
 			'title'         => esc_html__( 'Section with 2 columns' ),
@@ -215,6 +255,18 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Page Asset Without Image', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/asset-no-image'),
+		)
+	);
+
+	// Page Image 100% width
+	register_block_pattern(
+		'md/page-image-w-100',
+		array(
+			'title'         => esc_html__( 'Image 100% width' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Image 100% width', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/image-w-100'),
 		)
 	);
 }
