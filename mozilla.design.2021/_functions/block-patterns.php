@@ -32,7 +32,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 	);
 	register_block_pattern_category(
 		'md-page',
-		array( 'label' => esc_html__( 'Page' ) )
+		array( 'label' => esc_html__( 'Subpage' ) )
 	);
 	register_block_pattern_category(
 		'md-press-asset',
@@ -49,18 +49,6 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  */
 if ( function_exists( 'register_block_pattern' ) ) {
 	$viewportWidth = '98%';
-
-	// Layout 2 cols
-	// register_block_pattern(
-	// 	'md/two-cols',
-	// 	array(
-	// 		'title'         => esc_html__( 'Two columns' ),
-	// 		'categories'    => array( 'md-layout' ),
-	// 		'viewportWidth' => $viewportWidth,
-	// 		'description'   => esc_html_x( 'Two columns', 'Block pattern description' ),
-	// 		'content'       => md_return_get_template_part( '_partials/block-patterns/layout/cols-2'),
-	// 	)
-	// );
 
 	// Spacers
 	register_block_pattern(
@@ -176,61 +164,68 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
-	// Page Section with Left Offset
-	register_block_pattern(
-		'md/page-section-offset-left',
-		array(
-			'title'         => esc_html__( 'Section with Left Offset' ),
-			'categories'    => array( 'md-page' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Section with Left Offset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-offset-left'),
-		)
-	);
-
-	// Page Section with Large Left Offset
-	register_block_pattern(
-		'md/page-section-offset-left-lg',
-		array(
-			'title'         => esc_html__( 'Section with Large Left Offset' ),
-			'categories'    => array( 'md-page' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Section with Large Left Offset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-offset-left-lg'),
-		)
-	);
-
-	// Page Section with Right Offset
-	register_block_pattern(
-		'md/page-section-offset-right',
-		array(
-			'title'         => esc_html__( 'Section with Right Offset' ),
-			'categories'    => array( 'md-page' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Section with Right Offset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-offset-right'),
-		)
-	);
-
 	// Page Section with 2 columns
 	register_block_pattern(
 		'md/page-section-2-cols-offset-l',
 		array(
 			'title'         => esc_html__( 'Section with 2 columns with big gap' ),
-			'categories'    => array( 'md-page' ),
+			'categories'    => array( 'md-layout' ),
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Section with 2 columns with big gap', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-2-cols-offset-l'),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-2-cols-offset-l'),
 		)
 	);
 	register_block_pattern(
 		'md/page-section-2-cols',
 		array(
 			'title'         => esc_html__( 'Section with 2 columns' ),
-			'categories'    => array( 'md-page' ),
+			'categories'    => array( 'md-layout' ),
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Section with 2 columns', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/section-2-cols'),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-2-cols'),
+		)
+	);
+	register_block_pattern(
+		'md/page-section-3-cols',
+		array(
+			'title'         => esc_html__( 'Section with 3 columns' ),
+			'categories'    => array( 'md-layout' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with 3 columns', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-3-cols'),
+		)
+	);
+	// Page Section with Left Offset
+	register_block_pattern(
+		'md/page-section-offset-left',
+		array(
+			'title'         => esc_html__( 'Section with Left Offset' ),
+			'categories'    => array( 'md-layout' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Left Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-offset-left'),
+		)
+	);
+	// Page Section with Large Left Offset
+	register_block_pattern(
+		'md/page-section-offset-left-lg',
+		array(
+			'title'         => esc_html__( 'Section with Large Left Offset' ),
+			'categories'    => array( 'md-layout' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Large Left Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-offset-left-lg'),
+		)
+	);
+	// Page Section with Right Offset
+	register_block_pattern(
+		'md/page-section-offset-right',
+		array(
+			'title'         => esc_html__( 'Section with Right Offset' ),
+			'categories'    => array( 'md-layout' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Right Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-offset-right'),
 		)
 	);
 

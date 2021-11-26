@@ -98,12 +98,6 @@ function md_add_custom_gutenberg_font_sizes() {
 					'slug'      => 'sm',
 				),
 				array(
-					'name'      => esc_html__( 'Normal' ),
-					'shortName' => esc_html_x( 'M', 'Font size' ),
-					'size'      => 16,
-					'slug'      => 'md',
-				),
-				array(
 					'name'      => esc_html__( 'Bigger' ),
 					'shortName' => esc_html_x( '18', 'Font size' ),
 					'size'      => 18,
@@ -174,5 +168,6 @@ add_action('admin_head', 'md_custom_editor_style');
 function md_custom_editor_style() {
   echo '<style>
     .block-editor-block-patterns-list__item .editor-styles-wrapper {min-height: 150px !important;}
+	[aria-label^="Spacer"] .block-editor-block-patterns-list__item .editor-styles-wrapper {min-height: 0px !important;}
   </style>';
 }
