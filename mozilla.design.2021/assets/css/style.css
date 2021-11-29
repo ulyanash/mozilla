@@ -6089,6 +6089,9 @@ a:visited {
 .type--white {
     color: #ffffff;
 }
+.text--line-height-1 {
+    line-height: 1 !important;
+}
 .type--ff-h-mega,
 .has-h-mega-font-size,
 .type--h-mega {
@@ -6826,6 +6829,9 @@ code {
     content: "0" counter(items)" ";
     position: relative;
     z-index: 3;
+}
+.card-listing .card--menu ol li:nth-child(n+10):before {
+    content: counter(items)" ";
 }
 .card-listing .card--menu a {
     position: relative;
@@ -9253,5 +9259,12 @@ p.link {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+
+@media (max-width: 767px) {
+    .from-browser-to-parent-brand .type--h-xxl {
+        font-size: 45px !important;
+        line-height: 1.1 !important;
     }
 }

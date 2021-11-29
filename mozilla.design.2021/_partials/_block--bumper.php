@@ -7,6 +7,7 @@ $target_id = get_the_ID();
 if( wp_get_post_parent_id($target_id) ) {
   $target_id = wp_get_post_parent_id($target_id);
 }
+
 foreach( $links as $link ) {
   if( $link->post_parent == $target_id ) {
     $child_links[] = array(
@@ -17,7 +18,7 @@ foreach( $links as $link ) {
 
 $found = false;
 foreach( $child_links as $key => $link ) {
-  if( $found == "" ) {
+  if( $found == false ) { 
     if( $link['post_id'] == get_the_ID() ) {
       $found = true;
       if( $child_links[$key+1] ) {
@@ -30,9 +31,8 @@ foreach( $child_links as $key => $link ) {
   }
 
   if( $found == false ) {
-    $selected_link = $child_links[1];
+    $selected_link = $child_links[0];
   }
-
 }
 if ($selected_link != ""):
 ?>

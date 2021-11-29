@@ -149,9 +149,10 @@ if( get_the_title($target_id)== 'Firefox Brand') {
         </div>
         <?php
         foreach( $links as $link ) {
-          if( $link->post_parent == $target_id ) {
+          if( $link->post_parent == $target_id || ($link->object_id == $target_id && !empty($link->menu_item_parent))) {
             $section_nav_links[$link->object_id] = array(
-              'post_id' => $link->object_id
+              'post_id' => $link->object_id,
+              'title' => $link->title,
             );
           }
         }
@@ -161,6 +162,7 @@ if( get_the_title($target_id)== 'Firefox Brand') {
         if( $link['post_id'] == get_the_ID() ) {
           $output_id = $link['post_id'];
           $output_count = $count;
+          $output_title = $link['title'];
         }
       endforeach;
       if( $target_id ):
@@ -175,10 +177,12 @@ if( get_the_title($target_id)== 'Firefox Brand') {
                 <?php
                 if( $output_count == 0 ) {
                   $output_count = 1;
-                  $output_id = array_values($section_nav_links)[0]['post_id'];
+                  $output_item = array_values($section_nav_links)[0];
+                  $output_id = $output_item['post_id'];
+                  $output_title = $output_item['title'];
                 }
                 ?>
-                <a href="#" class="section-toggle"><span class="count">0<?php echo $output_count; ?></span> <span class="link-title"><?php echo get_the_title($output_id); ?></span></a>
+                <a href="#" class="section-toggle"><span class="count">0<?php echo $output_count; ?></span> <span class="link-title"><?php echo $output_title; ?></span></a>
               </div>
 
               <div class="dropdown col-12">
@@ -192,7 +196,7 @@ if( get_the_title($target_id)== 'Firefox Brand') {
                         $permalink = get_permalink($brand_parent_id);
                       }
                       ?>
-                      <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo get_the_title($link['post_id']); ?></span></a></li>
+                      <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link['title']; ?></span></a></li>
                     <?php endforeach; ?>
                   </ul>
                 </div>

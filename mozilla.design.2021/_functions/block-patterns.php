@@ -35,6 +35,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		array( 'label' => esc_html__( 'Subpage' ) )
 	);
 	register_block_pattern_category(
+		'md-ff',
+		array( 'label' => esc_html__( 'Firefox' ) )
+	);
+	register_block_pattern_category(
 		'md-press-asset',
 		array( 'label' => esc_html__( 'Press Assets' ) )
 	);
@@ -89,78 +93,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Spacer Large', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-lg'),
-		)
-	);
-
-	// Press Asset
-	register_block_pattern(
-		'md/press-asset',
-		array(
-			'title'         => esc_html__( 'Press Asset' ),
-			'categories'    => array( 'md-press-asset' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Press Asset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/press-asset'),
-		)
-	);
-
-	// Additional Press Asset 
-	register_block_pattern(
-		'md/additional-press-asset',
-		array(
-			'title'         => esc_html__( 'Additional Press Asset' ),
-			'categories'    => array( 'md-press-asset' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Additional Press Asset', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/additional'),
-		)
-	);
-
-	// Home Blocks Row
-	register_block_pattern(
-		'md/home-blocks-row',
-		array(
-			'title'         => esc_html__( 'Home Blocks Row' ),
-			'categories'    => array( 'md-home' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Home Blocks Row', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/blocks-row'),
-		)
-	);
-
-	// Resources
-	register_block_pattern(
-		'md/resource',
-		array(
-			'title'         => esc_html__( 'Resource Item' ),
-			'categories'    => array( 'md-resources' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Resource Item', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/resources/resource'),
-		)
-	);
-
-	// Page Title
-	register_block_pattern(
-		'md/page-title',
-		array(
-			'title'         => esc_html__( 'Page title' ),
-			'categories'    => array( 'md-page' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Page title', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/title'),
-		)
-	);
-
-	// Page Heading
-	register_block_pattern(
-		'md/page-heading-mega',
-		array(
-			'title'         => esc_html__( 'Heading Mega Big' ),
-			'categories'    => array( 'md-page' ),
-			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Heading Mega Big', 'Block pattern description' ),
-			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/heading-mega'),
 		)
 	);
 
@@ -229,6 +161,88 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
+	// Press Asset
+	register_block_pattern(
+		'md/press-asset',
+		array(
+			'title'         => esc_html__( 'Press Asset' ),
+			'categories'    => array( 'md-press-asset' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Press Asset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/press-asset'),
+		)
+	);
+
+	// Additional Press Asset 
+	register_block_pattern(
+		'md/additional-press-asset',
+		array(
+			'title'         => esc_html__( 'Additional Press Asset' ),
+			'categories'    => array( 'md-press-asset' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Additional Press Asset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/press-assets/additional'),
+		)
+	);
+
+	// Home Blocks Row
+	register_block_pattern(
+		'md/home-blocks-row',
+		array(
+			'title'         => esc_html__( 'Home Blocks Row' ),
+			'categories'    => array( 'md-home' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Home Blocks Row', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/blocks-row'),
+		)
+	);
+	register_block_pattern(
+		'md/home-blocks-row-2',
+		array(
+			'title'         => esc_html__( 'Home Blocks Row 2' ),
+			'categories'    => array( 'md-home' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Home Blocks Row 2', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/home/blocks-row-2'),
+		)
+	);
+
+	// Resources
+	register_block_pattern(
+		'md/resource',
+		array(
+			'title'         => esc_html__( 'Resource Item' ),
+			'categories'    => array( 'md-resources' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Resource Item', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/resources/resource'),
+		)
+	);
+
+	// Page Title
+	register_block_pattern(
+		'md/page-title',
+		array(
+			'title'         => esc_html__( 'Page title' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Page title', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/title'),
+		)
+	);
+
+	// Page Heading
+	register_block_pattern(
+		'md/page-heading-mega',
+		array(
+			'title'         => esc_html__( 'Heading Mega Big' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Heading Mega Big', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/heading-mega'),
+		)
+	);
+
 	// Page Asset
 	register_block_pattern(
 		'md/page-asset',
@@ -262,6 +276,40 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Image 100% width', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/image-w-100'),
+		)
+	);
+
+	// Page Font Select
+	register_block_pattern(
+		'md/font-select',
+		array(
+			'title'         => esc_html__( 'Font Select' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Font Select', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/font-select'),
+		)
+	);
+	// Page Type Scale
+	register_block_pattern(
+		'md/type-scale',
+		array(
+			'title'         => esc_html__( 'Type Scale' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Type Scale', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/type-scale'),
+		)
+	);
+	// Page From Browser To Parent Brand
+	register_block_pattern(
+		'md/from-browser-to-parent-brand',
+		array(
+			'title'         => esc_html__( 'From Browser To Parent Brand' ),
+			'categories'    => array( 'md-ff' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'From Browser To Parent Brand', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/firefox/from-browser-to-parent-brand'),
 		)
 	);
 }
