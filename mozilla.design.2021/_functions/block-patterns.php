@@ -58,41 +58,71 @@ if ( function_exists( 'register_block_pattern' ) ) {
 	register_block_pattern(
 		'md/spacer-xs',
 		array(
-			'title'         => esc_html__( 'Spacer XS' ),
+			'title'         => esc_html__( 'Spacer XS (20px)' ),
 			'categories'    => array( 'md-spacers' ),
 			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Spacer XS', 'Block pattern description' ),
+			'description'   => esc_html_x( 'Spacer XS (20px)', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-xs'),
 		)
 	);
 	register_block_pattern(
 		'md/spacer-s',
 		array(
-			'title'         => esc_html__( 'Spacer Small' ),
+			'title'         => esc_html__( 'Spacer Small (40px)' ),
 			'categories'    => array( 'md-spacers' ),
 			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Spacer Small', 'Block pattern description' ),
+			'description'   => esc_html_x( 'Spacer Small (40px)', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-s'),
 		)
 	);
 	register_block_pattern(
 		'md/spacer-m',
 		array(
-			'title'         => esc_html__( 'Spacer Medium' ),
+			'title'         => esc_html__( 'Spacer Medium (60px)' ),
 			'categories'    => array( 'md-spacers' ),
 			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Spacer Mediuml', 'Block pattern description' ),
+			'description'   => esc_html_x( 'Spacer Medium (60px)', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-m'),
 		)
 	);
 	register_block_pattern(
 		'md/spacer-lg',
 		array(
-			'title'         => esc_html__( 'Spacer Large' ),
+			'title'         => esc_html__( 'Spacer Large (80px)' ),
 			'categories'    => array( 'md-spacers' ),
 			'viewportWidth' => $viewportWidth,
-			'description'   => esc_html_x( 'Spacer Large', 'Block pattern description' ),
+			'description'   => esc_html_x( 'Spacer Large (80px)', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-lg'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-xl',
+		array(
+			'title'         => esc_html__( 'Spacer XL (120px)' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer XL (120px)', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-xl'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-xxl',
+		array(
+			'title'         => esc_html__( 'Spacer XXL (180px)' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer XXL (180px)', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-xxl'),
+		)
+	);
+	register_block_pattern(
+		'md/spacer-mega',
+		array(
+			'title'         => esc_html__( 'Spacer Mega (240px)' ),
+			'categories'    => array( 'md-spacers' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Spacer Mega (240px)', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/spacers/spacer-mega'),
 		)
 	);
 
@@ -276,6 +306,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Image 100% width', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/image-w-100'),
+		)
+	);
+	// Page Image 100px height
+	register_block_pattern(
+		'md/page-image-h-100px',
+		array(
+			'title'         => esc_html__( 'Image svg height fix' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Image svg height fix', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/image-h-100px'),
 		)
 	);
 

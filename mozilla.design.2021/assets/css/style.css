@@ -94,6 +94,10 @@
     max-width: 100%;
     height: auto;
 }
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+    padding: 0;
+    margin-right: 15%;
+}
 
 .align-baseline {
     vertical-align: baseline !important;
@@ -1670,6 +1674,9 @@ button.bg-dark:hover {
 }
 .h-auto {
     height: auto !important;
+}
+.h-100px {
+    height: 100px !important;
 }
 .mw-100 {
     max-width: 100% !important;
@@ -6102,6 +6109,12 @@ a:visited {
     font-family: "Metropolis-Bold", sans-serif;
     font-style: normal;
 }
+@media (max-width: 1019px) {
+    .type--h-mega {
+        font-size: 40px !important;
+        line-height: 44px !important;
+    }
+}
 .type--ff-h-xxl,
 .has-h-xxl-font-size,
 .type--h-xxl {
@@ -8287,7 +8300,9 @@ body.error404 .site-header {
 .mce-content-body ul,
 .wysiwyg-content dl,
 .wysiwyg-content ol,
-.wysiwyg-content ul {
+.wysiwyg-content ul,
+.text-content ol,
+.text-content ul {
     padding-left: 18px;
 }
 .mce-content-body p,
@@ -8769,6 +8784,10 @@ body.error404 .site-header {
 figure.w-100 img {
     height: auto;
     width: 100%;
+}
+figure.h-100px img {
+    height: 100%;
+    width: auto;
 }
 .standard-section .image+.text {
     margin-top: 5px;

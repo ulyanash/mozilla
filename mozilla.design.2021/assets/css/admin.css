@@ -87,9 +87,14 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
   margin-top: 60px !important;
 }
 .card-listing .card--menu ol li,
+.card-listing .card--menu ol li a:hover,
+.parent--mozilla .card--menu.section-nav-menu a:hover, 
 .card-listing .card--menu ol li:before {
   line-height: 1.1;
   font-size: 1.1rem;
+}
+.card-listing .card h2.mozilla-logo {
+  text-indent: 0;
 }
 
 .design-asset .wp-block-group__inner-container {

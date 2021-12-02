@@ -2,8 +2,8 @@
 <div class="wp-block-group page-section page-section--page-intro page-intro">
     <!-- wp:columns {"className":"row d-flex align-items-center"} -->
     <div class="wp-block-columns row d-flex align-items-center">
-        <!-- wp:column {"className":"col col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 page-intro--title type--h-xxl type--mb-h-md"} -->
-        <div class="wp-block-column col col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 page-intro--title type--h-xxl type--mb-h-md">
+        <!-- wp:column {"className":"col col-xl-9 offset-xl-1 col-lg-12 offset-lg-0 page-intro--title type--h-xxl type--mb-h-md"} -->
+        <div class="wp-block-column col col-xl-9 offset-xl-1 col-lg-12 offset-lg-0 page-intro--title type--h-xxl type--mb-h-md">
             <!-- wp:paragraph {"className":"count"} -->
             <p class="count">01</p>
             <!-- /wp:paragraph -->
