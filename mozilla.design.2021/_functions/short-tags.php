@@ -4,7 +4,7 @@
  */
 
 /**
- * Recent posts
+ * Font select with size change
  */
 function md_shortcode_font_select($params = []) {
     // set up default parameters
@@ -15,7 +15,18 @@ function md_shortcode_font_select($params = []) {
         'text_color' => '#ffff98',
     ), $params);
 
-    // Add 5 recent posts
     return md_return_get_template_part('_partials/short-tags/font-select', null, $args);
 }
 add_shortcode('md_font_select', 'md_shortcode_font_select');
+
+/**
+ * Color palette
+ */
+function md_shortcode_color_palette($params = []) {
+    $args = shortcode_atts([
+        'style' => 'full',
+    ], $params);
+    
+    return md_return_get_template_part('_partials/short-tags/color-palette', null, $args);
+}
+add_shortcode('md_color_palette', 'md_shortcode_color_palette');

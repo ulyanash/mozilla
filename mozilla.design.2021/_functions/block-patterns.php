@@ -331,6 +331,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/font-select'),
 		)
 	);
+	// Color Palette
+	register_block_pattern(
+		'md/color-palette',
+		array(
+			'title'         => esc_html__( 'Color Palette' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Color Palette', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/color-palette'),
+		)
+	);
 	// Page Type Scale
 	register_block_pattern(
 		'md/type-scale',
