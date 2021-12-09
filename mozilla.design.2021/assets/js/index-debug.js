@@ -347,6 +347,9 @@ var initZaps = function initZaps() {
     $(elem).on('click', function (e) {
       e.preventDefault();
     });
+    if ($(elem).next('.zap-text')) {
+      $(elem).attr('data-zap-text', $(elem).next('.zap-text').text());
+    }
     $(elem).attr('data-zap-target', idx);
     var text = $(elem).attr('data-zap-text'),
         styles = ['style-1', 'style-2', 'style-3'],

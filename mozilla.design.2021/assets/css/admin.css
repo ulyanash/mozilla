@@ -110,3 +110,6 @@ p.link a, .press-asset p.link a,  .additional-asset p.link a {
   height: auto;
   padding: 0;
 }
+.zap-container .zap-text {
+  display: block !important;
+}

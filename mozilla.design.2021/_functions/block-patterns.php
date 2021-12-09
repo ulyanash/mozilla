@@ -168,6 +168,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-offset-left'),
 		)
 	);
+	// Page Section with Medium Left Offset
+	register_block_pattern(
+		'md/page-section-offset-left-md',
+		array(
+			'title'         => esc_html__( 'Section with Medium Left Offset' ),
+			'categories'    => array( 'md-layout' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Section with Medium Left Offset', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/layout/section-offset-left-md'),
+		)
+	);
 	// Page Section with Large Left Offset
 	register_block_pattern(
 		'md/page-section-offset-left-lg',
@@ -270,6 +281,16 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'viewportWidth' => $viewportWidth,
 			'description'   => esc_html_x( 'Heading Mega Big', 'Block pattern description' ),
 			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/heading-mega'),
+		)
+	);
+	register_block_pattern(
+		'md/title-with-tooltip',
+		array(
+			'title'         => esc_html__( 'Title with tooltip' ),
+			'categories'    => array( 'md-page' ),
+			'viewportWidth' => $viewportWidth,
+			'description'   => esc_html_x( 'Title with tooltip', 'Block pattern description' ),
+			'content'       => md_return_get_template_part( '_partials/block-patterns/pages/page/title-with-tooltip'),
 		)
 	);
 

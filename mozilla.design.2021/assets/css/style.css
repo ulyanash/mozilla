@@ -5795,6 +5795,9 @@ body.in-transition {
     height: 18px;
     width: 18px;
 }
+.font-inter {
+    font-family: "Inter-Regular", sans-serif !important;
+}
 .barba-container {
     background: #ffffff;
     position: relative;
@@ -8370,6 +8373,9 @@ body.error404 .site-header {
 }
 .has-zap {
     display: inline-block;
+}
+.zap-container .wp-block-group__inner-container > .zap-text {
+    display: none;
 }
 .zap {
     opacity: 0;
