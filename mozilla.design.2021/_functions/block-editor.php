@@ -92,7 +92,7 @@ function md_add_custom_gutenberg_font_sizes() {
 					'slug'      => 'xs',
 				),
 				array(
-					'name'      => esc_html__( 'Extra small' ),
+					'name'      => esc_html__( 'Small' ),
 					'shortName' => esc_html_x( 'S', 'Font size' ),
 					'size'      => 14,
 					'slug'      => 'sm',

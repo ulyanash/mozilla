@@ -1,11 +1,11 @@
 <!-- wp:columns {"className":"row"} -->
 <div class="wp-block-columns row">
-    <!-- wp:column {"width":"100%","className":"col-12 col-lg-10 offset-none offset-lg-2 text-content"} -->
-    <div class="wp-block-column col-12 col-lg-10 offset-none offset-lg-2 text-content" style="flex-basis:100%">
+    <!-- wp:column {"width":"100%","className":"col-12 col-lg-10 offset-none offset-lg-2 type-scale"} -->
+    <div class="wp-block-column col-12 col-lg-10 offset-none offset-lg-2 type-scale" style="flex-basis:100%">
         <!-- wp:columns {"verticalAlignment":"center"} -->
         <div class="wp-block-columns are-vertically-aligned-center">
             <!-- wp:column {"verticalAlignment":"center","width":"70%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:70%">
+            <div class="wp-block-column is-vertically-aligned-center text" style="flex-basis:70%">
                 <!-- wp:paragraph {"fontSize":"h-xxl"} -->
                 <p class="has-h-xxl-font-size">Heading – XXL</p>
                 <!-- /wp:paragraph -->

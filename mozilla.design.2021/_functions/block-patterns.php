@@ -11,7 +11,7 @@ remove_theme_support( 'core-block-patterns' );
 /**
 * Remove unused styles
 */
-unregister_block_style( 'core/image', 'rounded' );
+// unregister_block_style( 'core/image', 'rounded' );
 
  /**
  * Register Block Pattern Category.

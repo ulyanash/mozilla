@@ -6453,7 +6453,7 @@ a:visited {
 }
 .parent--mozilla .site-footer .legal img+p > a,
 .parent--mozilla .type--h-xxxs,
-.parent--mozilla .has-h-xxxs-font-size,,
+.parent--mozilla .has-h-xxxs-font-size,
 .site-footer .legal .parent--mozilla img+p > a,
 .type--mz-h-xxxs {
     font-size: 18px;
@@ -9287,6 +9287,11 @@ p.link {
     }
 }
 
+@media (max-width: 1019px) {
+    .offset-lg-2 {
+        margin-left: 0 !important;
+    }
+}
 @media (max-width: 767px) {
     .from-browser-to-parent-brand .type--h-xxl {
         font-size: 45px !important;
