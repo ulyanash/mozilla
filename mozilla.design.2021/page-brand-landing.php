@@ -13,9 +13,10 @@ Template Name: Brand Landing Page
   <div class="page-section page-section--brand-interactive brand-interactive">
     <?php if( get_the_title() == 'Firefox Brand' ): ?>
     <?php include('_partials/_block--interactive-firefox.php'); ?>
-    <?php endif; ?>
-    <?php if( get_the_title() == 'Mozilla Brand' ): ?>
+    <?php elseif( get_the_title() == 'Mozilla Brand' ): ?>
     <?php include('_partials/_block--interactive-mozilla.php'); ?>
+    <?php else: ?>
+    <?php include('_partials/_block--interactive-brand.php'); ?>
     <?php endif; ?>
     <div class="container-fluid">
       <?php if( get_the_title() == 'Mozilla Brand' ): ?>
