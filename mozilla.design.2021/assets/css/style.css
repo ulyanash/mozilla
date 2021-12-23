@@ -7100,7 +7100,8 @@ body.error404 {
     padding-top: 0;
 }
 .page-template-404 .site-header,
-.page-template-page-brand-landing .site-header,
+.parent--firefox.page-template-page-brand-landing .site-header,
+.parent--mozilla.page-template-page-brand-landing .site-header,
 body.error404 .site-header {
     background: transparent;
 }
@@ -7866,7 +7867,7 @@ body.error404 .site-header {
 .interior-page-wrap {
     position: relative;
 }
-.page-template-page-brand-landing .section-nav a,
+.parent--firefox.page-template-page-brand-landing .section-nav a,
 .parent--mozilla .section-nav a {
     color: #ffffff;
 }

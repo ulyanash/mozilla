@@ -28,7 +28,7 @@ function mozilla_design_nav_item_title( $title, $item, $args, $depth ) {
       $target_id = wp_get_post_parent_id($target_id);
     }
     foreach( $links as $link ) {
-      if( $link->post_parent == $target_id ) {
+      if( $link->post_parent == $target_id || ($link->object_id == $target_id && !empty($link->menu_item_parent)) ) {
         $section_nav_links[$link->object_id] = array(
           'post_id' => $link->object_id
         );
@@ -37,7 +37,7 @@ function mozilla_design_nav_item_title( $title, $item, $args, $depth ) {
     $output_count = '';
     $count = 0; foreach( $section_nav_links as $link ):
       $count++;
-      if( $link['post_id'] == $item->object_id ) {
+      if( $link['post_id'] == $item->object_id || $link['post_id'] == $target_id ) {
         $output_count = $count;
       }
     endforeach;
