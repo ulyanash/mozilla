@@ -7044,6 +7044,9 @@ code {
     .site-header .desktop-nav .menu li {
         margin-right: 30px;
     }
+    .section-nav {
+        display: none !important;
+    }
 }
 .site-header .desktop-nav .menu li:last-child {
     margin-right: 0;
