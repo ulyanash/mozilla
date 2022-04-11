@@ -1,3 +1,7 @@
+:root {
+    --dark-grey: #959595;
+}
+
 .has-white-background-color {
     background-color: #fff !important;
 }
@@ -35,7 +39,7 @@
     background-color: #00458b !important;
 }
 .has-dark-grey-background-color {
-    background-color: #959595 !important;
+    background-color: var(--dark-grey) !important;
 }
 .has-light-grey-background-color {
     background-color: #e7e5e2 !important;
@@ -7173,7 +7177,7 @@ body.error404 .site-header {
     z-index: 1;
 }
 .parent--firefox.page-template-page-brand-landing .site-header .ff-bg.background {
-    opacity: 0;
+    /* opacity: 0; */
 }
 .firefox-transition .site-header .ff-bg.background {
     opacity: 0;
@@ -7182,7 +7186,7 @@ body.error404 .site-header {
     opacity: 0;
 }
 .parent--mozilla.page-template-page-brand-landing .site-header .mz-bg.background {
-    opacity: 0;
+    /* opacity: 0; */
 }
 .mozilla-transition .site-header .mz-bg.background {
     opacity: 0;
@@ -8185,12 +8189,9 @@ body.error404 .site-header {
     padding: 25px 0 50px;
     position: fixed;
     top: 0;
-    -webkit-transform: translateY(-100vh) translateY(70px);
-    -ms-transform: translateY(-100vh) translateY(70px);
-    transform: translateY(-100vh) translateY(70px);
-    -webkit-transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.5s;
-    -o-transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.5s;
-    transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.5s;
+    -webkit-transform:  translateY(-70px);
+    -ms-transform:  translateY(-70px);
+    transform:  translateY(-70px);
     visibility: hidden;
     width: 100%;
     z-index: 15;
@@ -8228,18 +8229,18 @@ body.error404 .site-header {
 .quick-links-open {
     overflow: hidden;
 }
-.quick-links-open .site-header {
-    -webkit-transform: translateY(100vh) translateY(-70px);
-    -ms-transform: translateY(100vh) translateY(-70px);
-    transform: translateY(100vh) translateY(-70px);
-}
 .quick-links-open .quick-links {
-    -webkit-transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0s;
-    -o-transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0s;
-    transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0s;
+    -webkit-transform:  translateY(70px);
+    -ms-transform:  translateY(70px);
+    transform:  translateY(70px);
+    
+    -o-transition: visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.1s, transform 0.5s cubic-bezier(0.07, 0.95, 0, 1);
+    transition:  visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.1s, transform 0.5s cubic-bezier(0.07, 0.95, 0, 1);
+    transition:  visibility 0s cubic-bezier(0.07, 0.95, 0, 1) 0.1s, transform 0.5s cubic-bezier(0.07, 0.95, 0, 1), -webkit-transform 0.5s cubic-bezier(0.07, 0.95, 0, 1);
+
     visibility: visible;
 }
-.quick-links-open .page-section--main {
+.home.quick-links-open .page-section--main {
     -webkit-transform: translateY(100vh) translateY(-70px);
     -ms-transform: translateY(100vh) translateY(-70px);
     transform: translateY(100vh) translateY(-70px);
@@ -8253,6 +8254,21 @@ body.error404 .site-header {
 }
 .quick-links .additional-assets .additional-asset a.justify-content-center .name {
     white-space: nowrap;
+}
+.quick-links .additional-assets .additional-asset .name .icon {
+    position: relative;
+    margin-right: 18px;
+    padding-right: 8px;
+}
+.quick-links .additional-assets .additional-asset .name .icon:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+    width: 1px;
+    background: var(--dark-grey);
 }
 @media (max-width: -1) {
     .mce-content-body .alignleft,

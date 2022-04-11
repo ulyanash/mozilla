@@ -25,7 +25,7 @@
                     $link = $file['url'];
                   }
                   ?>
-                  <a href="<?php echo $link; ?>" class="prevent d-flex align-items-center <?php echo ( get_sub_field('file') ) ? 'justify-space-between' : ' justify-content-center'; ?>">
+                  <a href="<?php echo $link; ?>" class="prevent d-flex align-items-center justify-space-between">
 
                     <div class="name type--sm">
                       <?php if( get_sub_field('icon') ): $icon = get_sub_field('icon'); ?>
@@ -46,8 +46,10 @@
 
                     <div class="filetype type--sm">
                       <?php if( get_sub_field('file') ): ; ?>
-                        <?php echo '.'.end(explode('.', $file['filename'])); ?>
-                        <?php endif; ?>
+                        <i class="icon icon--download"></i>
+                      <?php else: ?>
+                        <i class="icon icon--link"></i>
+                      <?php endif; ?>
                       </div>
                     </a>
                   </div>
