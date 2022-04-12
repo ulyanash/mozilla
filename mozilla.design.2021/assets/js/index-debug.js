@@ -297,6 +297,7 @@ var initNav = function initNav() {
   $('.quick-links-toggle').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('quick-links-open');
+    $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
   });
 };
 
