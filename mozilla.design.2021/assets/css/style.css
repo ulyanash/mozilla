@@ -8259,7 +8259,7 @@ body.error404 .site-header {
     visibility: visible;
     opacity: 1;
 }
-.home.quick-links-open .page-section--main {
+.quick-links-open .page-section--main {
     -webkit-transform: translateY(100vh) translateY(-70px);
     -ms-transform: translateY(100vh) translateY(-70px);
     transform: translateY(100vh) translateY(-70px);
