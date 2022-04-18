@@ -14,11 +14,12 @@ $override_page = false;
 if( get_field('display_child_page', $brand_parent_id) ) {
   $override_page = get_field('display_child_page', $brand_parent_id);
 }
-$page_title = get_bloginfo('title');
-if( get_the_title($target_id)== 'Firefox Brand') {
-  //$page_title = 'firefox dot design';
-  $page_title = 'mozilla dot design';
-}
+// $page_title = get_bloginfo('title');
+// if( get_the_title($target_id)== 'Firefox Brand') {
+//   //$page_title = 'firefox dot design';
+//   $page_title = 'mozilla dot design';
+// }
+$page_title = 'mozilla dot design';
 
 ?>
 <!doctype html>
@@ -147,7 +148,11 @@ if( get_the_title($target_id)== 'Firefox Brand') {
             </a>
           </div>
         </div>
-        <?php
+  </div>
+</div>
+
+<div class="mobile-sub-nav d-block d-lg-none">
+      <?php
         foreach( $links as $link ) {
           if( $link->post_parent == $target_id || ($link->object_id == $target_id && !empty($link->menu_item_parent))) {
             $section_nav_links[$link->object_id] = array(
@@ -156,67 +161,34 @@ if( get_the_title($target_id)== 'Firefox Brand') {
             );
           }
         }
-        $output_count = '';
-        $count = 0; foreach( $section_nav_links as $link ):
-        $count++;
-        if( $link['post_id'] == get_the_ID() ) {
-          $output_id = $link['post_id'];
-          $output_count = $count;
-          $output_title = $link['title'];
-        }
-      endforeach;
       if( $target_id ):
         ?>
-        <!-- <div class="row mobile-interior-section-nav open">
-          <div class="col-12">
-            <div class="row d-flex align-items-center">
-              <div class="col-5 type--h-xxxs">
-                <a href="<?php echo get_permalink($target_id); ?>"><?php echo get_the_title($target_id); ?></a>
-              </div>
-              <div class="col-7 type--h-xxxs visible-links">
+        <div class="row mobile-interior-section-nav open">
+          <div class="col-12 type--h-xxs visible-links">
+              <ul class="section-nav-menu-links type--h-xxs">
+                <?php $count = 0; foreach( $section_nav_links as $link ):  $count++; ?>
                 <?php
-                if( $output_count == 0 ) {
-                  $output_count = 1;
-                  $output_item = array_values($section_nav_links)[0];
-                  $output_id = $output_item['post_id'];
-                  $output_title = $output_item['title'];
+                $permalink = get_permalink($link['post_id']);
+                if( $link['post_id'] == $override_page[0]->ID ) {
+                  $permalink = get_permalink($brand_parent_id);
                 }
                 ?>
-                <a href="#" class="section-toggle"><span class="count">0<?php echo $output_count; ?></span> <span class="link-title"><?php echo $output_title; ?></span></a>
-              </div>
-
-              <div class="dropdown col-12">
-                <div class="row">
-                  <div class="col-7 offset-5">
-                    <ul class="section-nav-menu-links type--h-xxxs">
-                      <?php $count = 0; foreach( $section_nav_links as $link ):  $count++; ?>
-                      <?php
-                      $permalink = get_permalink($link['post_id']);
-                      if( $link['post_id'] == $override_page[0]->ID ) {
-                        $permalink = get_permalink($brand_parent_id);
-                      }
-                      ?>
-                      <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link['title']; ?></span></a></li>
-                    <?php endforeach; ?>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link['title']; ?></span></a></li>
+                <?php endforeach; ?>
+              </ul>
           </div>
         </div>
-      </div> -->
-    </div>
-  <?php endif; ?>
+      </div>
+    <?php endif; ?>
 </div>
 
-
-<div class="mobile-nav type--ff-h-sm">
+<div class="mobile-nav type--ff-h-xxs">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
         <?php
         wp_nav_menu( array(
-          'theme_location' => 'mobile',
+          'theme_location' => 'primary',
           'depth' => 2,
           'container' => false
         ) ); ?>

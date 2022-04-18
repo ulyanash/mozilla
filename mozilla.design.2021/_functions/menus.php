@@ -12,9 +12,6 @@ register_nav_menus(array('primary' => 'Primary Navigation'));
 // Create footer nav menu
 register_nav_menus(array('footer' => 'Footer Navigation'));
 
-// Create mobile nav menu
-register_nav_menus(array('mobile' => 'Mobile Navigation'));
-
 // allow editors to manage theme options (edit menus)
 $role_object = get_role( 'editor' ); // get the the role object
 $role_object->add_cap( 'edit_theme_options' ); // add $cap capability to this role object
