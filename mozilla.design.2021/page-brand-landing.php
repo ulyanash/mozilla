@@ -38,6 +38,7 @@ Template Name: Brand Landing Page
         <div class="col-12 col-xxl-9 col-xl-9 col-lg-8 force-max-width">
 
   <?php 
+// TODO: push subpages here
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();

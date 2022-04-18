@@ -286,6 +286,7 @@ var initNav = function initNav() {
   $('.mobile-nav-toggle').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('mobile-menu-open');
+    $('body').removeClass('quick-links-open', $('body').hasClass('mobile-menu-open'));
   });
   $('.mobile-nav .menu-item-has-children > a .arrow').remove();
   $('.mobile-nav .menu-item-has-children > a').addClass('prevent').append('<span class="arrow"></span>');
@@ -297,6 +298,7 @@ var initNav = function initNav() {
   $('.quick-links-toggle').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('quick-links-open');
+    $('body').removeClass('mobile-menu-open', $('body').hasClass('quick-links-open'));
     $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
   });
 };

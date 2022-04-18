@@ -1,8 +1,8 @@
-<div class="d-none d-lg-block page-section page-section--quick-links quick-links" role="navigation">
+<div class="d-lg-block page-section page-section--quick-links quick-links" role="navigation">
   <div class="container-fluid">
     <div class="row d-flex">
       <?php while(have_rows('quick_links', 'option')): the_row(); ?>
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
 
               <h2 class="title type--ff-h-lg<?php echo ( get_sub_field('column_title') == 'Mozilla' ) ? ' type--mz-h-lg' : ''; ?>">
                 <?php if( get_sub_field('column_title_image') ): ?>
@@ -29,7 +29,7 @@
 
                     <div class="name type--sm">
                       <?php if( get_sub_field('icon') ): $icon = get_sub_field('icon'); ?>
-                        <div class="icon">
+                        <div class="icon <?php echo (get_sub_field('name') ? 'with-separator' : '') ?>">
                           <noscript>
                             <img src="<?php echo $icon['sizes']['large']; ?>" alt="<?php the_sub_field('description'); ?>" />
                           </noscript>

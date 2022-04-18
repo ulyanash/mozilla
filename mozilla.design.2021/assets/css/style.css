@@ -7123,9 +7123,9 @@ body.error404 .site-header {
 .page-template-page-press-assets .site-header {
     background: transparent;
 }
-.home .site-header > .container-fluid,
-.page-template-page-design-tools .site-header > .container-fluid,
-.page-template-page-press-assets .site-header > .container-fluid {
+.home:not(.mobile-menu-open) .site-header > .container-fluid,
+.page-template-page-design-tools:not(.mobile-menu-open) .site-header > .container-fluid,
+.page-template-page-press-assets:not(.mobile-menu-open) .site-header > .container-fluid {
     background: #fff;
 }
 .home .site-header a,
@@ -7255,7 +7255,8 @@ body.error404 .site-header {
     margin-bottom: 25px;
 }
 .home .site-header .mobile-nav li.menu-item-has-children > a .arrow,
-.site-header .mobile-nav li.menu-item-has-children > a .arrow {
+.site-header .mobile-nav li.menu-item-has-children > a .arrow,
+.site-header .mobile-nav .quick-links-toggle:after {
     background: url("../images/down-arrow-white.svg") no-repeat transparent 50% 50%;
     background-size: contain;
     content: "";
@@ -7300,7 +7301,6 @@ body.error404 .site-header {
     display: inline-block;
     margin-right: 10px;
     opacity: 0.5;
-    width: 40px;
 }
 .home .site-header .mobile-nav li.menu-item-has-children.open > a .arrow,
 .home .site-header .mobile-nav li.menu-item-has-children.open > a:after,
@@ -7354,11 +7354,11 @@ body.error404 .site-header {
 @media (max-width: 1019px) {
     .parent--firefox .site-header,
     .parent--mozilla .site-header {
-        height: 130px;
+        /* height: 130px; */
     }
     .parent--firefox .site-header .update-content > .row:first-child,
     .parent--mozilla .site-header .update-content > .row:first-child {
-        height: 70px;
+        /* height: 70px; */
     }
 }
 .parent--firefox .mobile-interior-section-nav,
@@ -8274,12 +8274,12 @@ body.error404 .site-header {
 .quick-links .additional-assets .additional-asset a.justify-content-center .name {
     white-space: nowrap;
 }
-.quick-links .additional-assets .additional-asset .name .icon {
+.quick-links .additional-assets .additional-asset .name .icon.with-separator {
     position: relative;
     margin-right: 18px;
     padding-right: 8px;
 }
-.quick-links .additional-assets .additional-asset .name .icon:after {
+.quick-links .additional-assets .additional-asset .name .icon.with-separator:after {
     content: '';
     position: absolute;
     right: 0;
@@ -9243,7 +9243,6 @@ p.link {
     display: -ms-flexbox;
     display: flex;
     height: 40px;
-    width: 45%;
 }
 .additional-assets .additional-asset .name .wp-block-group__inner-container {
     display: flex;
@@ -9261,7 +9260,7 @@ p.link {
 }
 .additional-assets .additional-asset .filetype {
     text-align: right;
-    width: 21.6666667%;
+    width: 20px;
     margin: 0;
 }
 .error404 {

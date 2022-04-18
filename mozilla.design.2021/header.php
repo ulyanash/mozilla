@@ -167,7 +167,7 @@ if( get_the_title($target_id)== 'Firefox Brand') {
       endforeach;
       if( $target_id ):
         ?>
-        <div class="row mobile-interior-section-nav open">
+        <!-- <div class="row mobile-interior-section-nav open">
           <div class="col-12">
             <div class="row d-flex align-items-center">
               <div class="col-5 type--h-xxxs">
@@ -204,7 +204,7 @@ if( get_the_title($target_id)== 'Firefox Brand') {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   <?php endif; ?>
 </div>
@@ -216,7 +216,7 @@ if( get_the_title($target_id)== 'Firefox Brand') {
       <div class="col-12">
         <?php
         wp_nav_menu( array(
-          'theme_location' => 'primary',
+          'theme_location' => 'mobile',
           'depth' => 2,
           'container' => false
         ) ); ?>
