@@ -37,13 +37,27 @@ Template Name: Brand Landing Page
       <div class="row">
         <div class="col-12 col-xxl-9 col-xl-9 col-lg-8 force-max-width">
 
-  <?php 
-// TODO: push subpages here
+<?php 
+$page_children = get_children([
+  'post_parent' => get_the_ID(),
+  'numberposts' => -1,
+  'post_status' => 'publish',
+  'order'       => 'ASC',
+  'orderby'     => 'menu_order',
+]);
+
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
   the_content();
 
+  foreach ($page_children as $child):
+?>
+  <section class="brand-page-section" id="#brand-page-section-<?php echo $child->ID ?>">
+    <?php echo get_the_content(null, false, $child); ?>
+  </section>
+<?php 
+  endforeach;
 endwhile; // End of the loop.
 ?>
         </div>

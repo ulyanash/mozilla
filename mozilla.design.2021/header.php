@@ -9,11 +9,7 @@ $target_id = get_the_ID();
 if( wp_get_post_parent_id($target_id) ) {
   $target_id = wp_get_post_parent_id($target_id);
 }
-$brand_parent_id = $target_id;
-$override_page = false;
-if( get_field('display_child_page', $brand_parent_id) ) {
-  $override_page = get_field('display_child_page', $brand_parent_id);
-}
+
 // $page_title = get_bloginfo('title');
 // if( get_the_title($target_id)== 'Firefox Brand') {
 //   //$page_title = 'firefox dot design';
@@ -169,9 +165,6 @@ $page_title = 'mozilla dot design';
                 <?php $count = 0; foreach( $section_nav_links as $link ):  $count++; ?>
                 <?php
                 $permalink = get_permalink($link['post_id']);
-                if( $link['post_id'] == $override_page[0]->ID ) {
-                  $permalink = get_permalink($brand_parent_id);
-                }
                 ?>
                   <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link['title']; ?></span></a></li>
                 <?php endforeach; ?>

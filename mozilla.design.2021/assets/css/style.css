@@ -7111,6 +7111,9 @@ code {
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
+.page-template-page-brand-landing {
+    scroll-behavior: smooth;
+}
 .page-template-404,
 .page-template-page-brand-landing,
 body.error404 {
@@ -8234,7 +8237,7 @@ body.error404 .site-header {
     margin-bottom: 0;
 }
 .page-template-page-brand-landing .page-intro {
-    height: 80vh;
+    /* height: 80vh; */
 }
 @media (max-width: 1019px) {
     .page-template-page-brand-landing .page-intro {

@@ -301,6 +301,22 @@ var initNav = function initNav() {
     $('body').removeClass('mobile-menu-open', $('body').hasClass('quick-links-open'));
     $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
   });
+
+  // brand page side menu
+  $('.section-nav-menu-links a').on('click', function(e) {
+    e.preventDefault();
+    
+    const menuIndex = $(this).parent().index();
+    
+    $('html, body').animate({
+      scrollTop: $('.brand-page-section:eq('+menuIndex+'):first').offset().top
+    }, 500, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+    //   window.location.hash = hash;
+    })
+
+    return false;
+  });
 };
 
 var initSectionNav = function initSectionNav() {
