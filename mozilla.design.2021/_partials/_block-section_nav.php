@@ -1,34 +1,32 @@
 <?php
 $current_id = get_the_ID();
 $term = get_term_by('name', 'Primary Navigation', 'nav_menu');
-$menu_id = $term->term_id;
+// $menu_id = $term->term_id;
 $links = wp_get_nav_menu_items($term->term_id);
-$section_nav_links = array();
-$brand_parent_id = get_the_ID();
-if( wp_get_post_parent_id($brand_parent_id) ) {
-  $brand_parent_id = wp_get_post_parent_id($brand_parent_id);
-}
+// $section_nav_links = array();
+// $brand_parent_id = get_the_ID();
+// if( wp_get_post_parent_id($brand_parent_id) ) {
+//   $brand_parent_id = wp_get_post_parent_id($brand_parent_id);
+// }
 
-foreach( $links as $link ) {
-  if( $link->post_parent == $brand_parent_id || ($link->object_id == $brand_parent_id && !empty($link->menu_item_parent))) {    
-    $section_nav_links[$link->object_id] = array(
-      'post_id' => $link->object_id,
-      'title' => $link->title,
-    );
-  }
-}
+// foreach( $links as $link ) {
+//   if( $link->post_parent == $brand_parent_id || ($link->object_id == $brand_parent_id && !empty($link->menu_item_parent))) {    
+//     $section_nav_links[$link->object_id] = array(
+//       'post_id' => $link->object_id,
+//       'title' => $link->title,
+//     );
+//   }
+// }
 ?>
 <div class="section-nav col-xl-3 col-lg-4">
   <div class="section-nav-menu type--h-sm type--mb-h-xxs">
     <ul class="section-nav-menu-links">
-      <?php $count = 0; foreach( $section_nav_links as $link ):  $count++; ?>
-      <?php
-        $permalink = get_permalink($link['post_id']);
-        $title = $link['title'] ?: get_the_title($link['post_id']);
-        $is_current = ( $current_id == $link['post_id'] ) ? 'current' : '';
-      ?>
-      <li><a class="<?php echo $is_current; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $title; ?></span></a></li>
-    <?php endforeach; ?>
+    <?php 
+      $count = 0;
+      foreach( $links as $link ): 
+        if( $link->post_parent == $current_id ): $count++; ?>
+          <li><a class="<?php echo ($current_id == $link->object_id) ? 'current' : ''; ?>"href="<?php echo $link->url; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link->title; ?></span></a></li>
+    <?php endif; endforeach; ?>
     </ul>
   </div>
 </div>

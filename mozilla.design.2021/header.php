@@ -148,26 +148,17 @@ $page_title = 'mozilla dot design';
 </div>
 
 <div class="mobile-sub-nav d-block d-lg-none">
-      <?php
-        foreach( $links as $link ) {
-          if( $link->post_parent == $target_id || ($link->object_id == $target_id && !empty($link->menu_item_parent))) {
-            $section_nav_links[$link->object_id] = array(
-              'post_id' => $link->object_id,
-              'title' => $link->title,
-            );
-          }
-        }
-      if( $target_id ):
-        ?>
+      <?php if( $target_id ): ?>
         <div class="row mobile-interior-section-nav open">
           <div class="col-12 type--h-xxs visible-links">
               <ul class="section-nav-menu-links type--h-xxs">
-                <?php $count = 0; foreach( $section_nav_links as $link ):  $count++; ?>
-                <?php
-                $permalink = get_permalink($link['post_id']);
-                ?>
-                  <li><a class="<?php echo ($current_id == $link['post_id']) ? 'current' : ''; ?>"href="<?php echo $permalink; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo $link['title']; ?></span></a></li>
-                <?php endforeach; ?>
+                <?php 
+                  $count = 0;
+                  foreach( $links as $link ): 
+                    if( $link->post_parent == $target_id ): $count++; ?>
+<?php var_dump($link->url); ?>
+                  <li><a class="<?php echo ($current_id == $link->object_id) ? 'current' : ''; ?>"href="<?php echo $link->url; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo  $link->title; ?></span></a></li>
+                <?php endif; endforeach; ?>
               </ul>
           </div>
         </div>

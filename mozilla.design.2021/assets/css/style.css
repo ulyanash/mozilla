@@ -2,6 +2,10 @@
     --dark-grey: #959595;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 .has-white-background-color {
     background-color: #fff !important;
 }
@@ -7110,9 +7114,6 @@ code {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
-}
-.page-template-page-brand-landing {
-    scroll-behavior: smooth;
 }
 .page-template-404,
 .page-template-page-brand-landing,

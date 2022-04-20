@@ -303,20 +303,20 @@ var initNav = function initNav() {
   });
 
   // brand page side menu
-  $('.section-nav-menu-links a').on('click', function(e) {
-    e.preventDefault();
+  // $('.section-nav-menu-links a').on('click', function(e) {
+  //   e.preventDefault();
     
-    const menuIndex = $(this).parent().index();
+  //   const menuIndex = $(this).parent().index();
     
-    $('html, body').animate({
-      scrollTop: $('.brand-page-section:eq('+menuIndex+'):first').offset().top
-    }, 500, function(){
-      // Add hash (#) to URL when done scrolling (default click behavior)
-    //   window.location.hash = hash;
-    })
+  //   $('html, body').animate({
+  //     scrollTop: $('.brand-page-section:eq('+menuIndex+'):first').offset().top
+  //   }, 500, function(){
+  //     // Add hash (#) to URL when done scrolling (default click behavior)
+  //   //   window.location.hash = hash;
+  //   })
 
-    return false;
-  });
+  //   return false;
+  // });
 };
 
 var initSectionNav = function initSectionNav() {

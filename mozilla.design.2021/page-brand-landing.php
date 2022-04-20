@@ -53,7 +53,7 @@ while ( have_posts() ) :
 
   foreach ($page_children as $child):
 ?>
-  <section class="brand-page-section" id="#brand-page-section-<?php echo $child->ID ?>">
+  <section class="brand-page-section" id="brand-page-section-<?php echo $child->post_name ?>">
     <?php echo get_the_content(null, false, $child); ?>
   </section>
 <?php 
