@@ -147,7 +147,7 @@ $page_title = 'mozilla dot design';
   </div>
 </div>
 
-<div class="mobile-sub-nav d-block d-lg-none">
+<div class="mobile-sub-nav ">
       <?php if( $target_id ): ?>
         <div class="row mobile-interior-section-nav open">
           <div class="col-12 type--h-xxs visible-links">

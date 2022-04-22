@@ -51,18 +51,8 @@ add_filter( 'nav_menu_item_title', 'mozilla_design_nav_item_title', 10, 4 );
 function mozilla_design_setup_nav_menu_item( $post ) {
   if( $post->post_parent ) {
     $post->url = '#brand-page-section-' . get_post_field('post_name', $post->object_id);
-
-    // $brand_parent_id = $post->post_parent;
-    // $override_page = false;
-    // if( get_field('display_child_page', $brand_parent_id) ) {
-    //   $override_page = get_field('display_child_page', $brand_parent_id);
-    // }
-
-    // if( $post->object_id == $override_page[0]->ID ) {
-    //   $post->url = get_permalink($brand_parent_id);
-    // }
   }
 
   return $post;
 }
-add_filter( 'wp_setup_nav_menu_item', 'mozilla_design_setup_nav_menu_item', 10, 1 );
+// add_filter( 'wp_setup_nav_menu_item', 'mozilla_design_setup_nav_menu_item', 10, 1 );

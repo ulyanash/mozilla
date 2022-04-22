@@ -302,6 +302,13 @@ var initNav = function initNav() {
     $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
   });
 
+  $('.mobile-nav .sub-menu a').on('click', function(e) {
+    let link = $(this).attr('href');
+    let chunks = link.split('/');
+    chunks.pop();
+    window.location.href = chunks.join('/');
+  });
+
   // brand page side menu
   // Add smooth scrolling to all links
   $('.section-nav-menu-links a').on('click', function(e) {

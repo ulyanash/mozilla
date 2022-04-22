@@ -7170,9 +7170,9 @@ body.error404 .site-header {
 .page-template-page-press-assets .site-header .icon--bars {
     background-image: url("../images/bars-black.svg");
 }
-.has-scrolled.home .site-header > .container-fluid,
-.has-scrolled.page-template-page-design-tools .site-header > .container-fluid,
-.has-scrolled.page-template-page-press-assets .site-header > .container-fluid {
+.has-scrolled.home:not(.mobile-menu-open) .site-header > .container-fluid,
+.has-scrolled.page-template-page-design-tools:not(.mobile-menu-open) .site-header > .container-fluid,
+.has-scrolled.page-template-page-press-assets:not(.mobile-menu-open) .site-header > .container-fluid {
     background: rgba(255,255,255,0.9);
 }
 .parent--firefox.page .site-header .ff-bg.background {
