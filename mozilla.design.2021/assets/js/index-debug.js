@@ -302,64 +302,107 @@ var initNav = function initNav() {
     $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
   });
 
+  var transitionBrand = function transitionBrand() {
+    var tl = new _TweenLite.TimelineLite();
+    tl.add(TweenLite.to($('header'), 1, {
+      ease: _TweenLite.Power2.easeOut,
+      opacity: 1
+    }));
+    tl.staggerTo($('.card-listing--card'), 0.5, {
+      y: 0,
+      opacity: 1
+    }, 0.15, "+=0", function () {
+      $('body').removeClass('in-transition');
+    });
+    tl.play();
+  };
+  
   $('.mobile-nav .sub-menu a').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     let link = $(this).attr('href');
-    let chunks = link.split('/');
-    chunks.pop();
-    window.location.href = chunks.join('/');
+    let chunks = link.replace(/\/$/, "").split('/');
+    const hash = chunks.pop();
+    window.location.href = chunks.join('/') + '/#' + hash;
+    return false;
   });
-
-  // brand page side menu
-  // Add smooth scrolling to all links
-  $('.section-nav-menu-links a').on('click', function(e) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      e.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        window.location.hash = hash;
-      });
+  
+  function scrollToSection(hash) {
+    $('html, body').stop( true, true ).animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+      window.location.hash = hash;
+    });
+  }
+  
+  $( window ).on( "load", function() {
+    if (window.location.hash.length > 0) {
+      scrollToSection(window.location.hash);
     }
   });
+  
+  $( window ).on( "hashchange", function() {
+    $('body').removeClass('mobile-menu-open');
+    scrollToSection(window.location.hash);
+  });
+  
+  $('.section-nav-menu-links a').on('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+  
+      $('.section-nav-menu-links a').removeClass('current');
+      $(this).addClass('current');
+  
+      let chunks = $(this).attr('href').replace(/\/$/, "").split('/');
+      const hash = chunks.pop();
+  
+      // Scroll  to hash
+      scrollToSection('#' + hash);
+  });
+  
+  //   $(window).scroll(function(){
+  //     // This is then function used to detect if the element is scrolled into view
+  //     function elementScrolled(elem)
+  //     {
+  //       var docViewTop = $(window).scrollTop();
+  //       var docViewBottom = docViewTop + $(window).height();
+  //       var elemTop = $(elem).offset().top;
+  //       return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+  //     }
+  
+  //     $('.brand-page-section').each(function(i, el) {
+  //         if(elementScrolled(el)) {
+  //             console.log(el, 'el');
+  //         }
+  //     });
+  //   });
+  
+  
+    // define an observer instance
+    // var observer = new IntersectionObserver(onIntersection, {
+    //   rootMargin: "100px 0px 20px",
+    //   root: null,   // default is the viewport
+    //   threshold: 0 // percentage of target's visible area. Triggers "onIntersection"
+    // })
+  
+    // callback is called on intersection change
+    // function onIntersection(entries, opts){
+    //   entries.every(entry => {
+    //       if (entry.isIntersecting) {
+    //           $('.section-nav-menu-links a').removeClass('current');
+    //           $('a[href="#' + entry.target.id+'"]').addClass('current');
+  
+    //           return false;
+    //       }
+    //   })
+    // }
+  
+      // Use the observer to observe an element
+      // $('.brand-page-section').each(function(i, el) {
+      //     observer.observe(el);
+      // });
+  
 
-  // define an observer instance
-  var observer = new IntersectionObserver(onIntersection, {
-    root: null,   // default is the viewport
-    threshold: .5 // percentage of target's visible area. Triggers "onIntersection"
-  })
-
-  // callback is called on intersection change
-  function onIntersection(entries, opts){
-    entries.forEach(entry => {
-console.log(entry.target, 'entry.target'); 
-      entry.target.classList.toggle('visible', entry.isIntersecting)
-    })
-  }
-
-  // Use the observer to observe an element
-  observer.observe( document.querySelector('.brand-page-section') )
-
-
-  // $('.section-nav-menu-links a').on('click', function(e) {
-  //   e.preventDefault();
-    
-  //   const menuIndex = $(this).parent().index();
-    
-  //   $('html, body').animate({
-  //     scrollTop: $('.brand-page-section:eq('+menuIndex+'):first').offset().top
-  //   }, 500, function(){
-  //     // Add hash (#) to URL when done scrolling (default click behavior)
-  //   //   window.location.hash = hash;
-  //   })
-
-  //   return false;
-  // });
 };
 
 var initSectionNav = function initSectionNav() {
