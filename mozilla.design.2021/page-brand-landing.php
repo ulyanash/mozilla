@@ -66,14 +66,5 @@ endwhile; // End of the loop.
   </div>
 
 </div>
-<?php if( get_field('custom_bumper') ): ?>
-
-<?php include('_partials/_block--bumper-custom.php'); ?>
-
-<?php else : ?>
-
-<?php include('_partials/_block--bumper.php'); ?>
-
-<?php endif; ?>
 
 <?php get_footer(); ?>

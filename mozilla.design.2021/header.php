@@ -156,7 +156,6 @@ $page_title = 'mozilla dot design';
                   $count = 0;
                   foreach( $links as $link ): 
                     if( $link->post_parent == $target_id ): $count++; ?>
-<?php var_dump($link->url); ?>
                   <li><a class="<?php echo ($current_id == $link->object_id) ? 'current' : ''; ?>"href="<?php echo $link->url; ?>"><span class="count">0<?php echo $count; ?></span><span class="link-title"><?php echo  $link->title; ?></span></a></li>
                 <?php endif; endforeach; ?>
               </ul>

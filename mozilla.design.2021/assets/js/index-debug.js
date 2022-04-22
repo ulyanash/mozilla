@@ -303,6 +303,42 @@ var initNav = function initNav() {
   });
 
   // brand page side menu
+  // Add smooth scrolling to all links
+  $('.section-nav-menu-links a').on('click', function(e) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      e.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    }
+  });
+
+  // define an observer instance
+  var observer = new IntersectionObserver(onIntersection, {
+    root: null,   // default is the viewport
+    threshold: .5 // percentage of target's visible area. Triggers "onIntersection"
+  })
+
+  // callback is called on intersection change
+  function onIntersection(entries, opts){
+    entries.forEach(entry => {
+console.log(entry.target, 'entry.target'); 
+      entry.target.classList.toggle('visible', entry.isIntersecting)
+    })
+  }
+
+  // Use the observer to observe an element
+  observer.observe( document.querySelector('.brand-page-section') )
+
+
   // $('.section-nav-menu-links a').on('click', function(e) {
   //   e.preventDefault();
     

@@ -3,7 +3,7 @@
 }
 
 html, body {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 .has-white-background-color {
@@ -6985,10 +6985,6 @@ code {
 .site-footer .legal img+p > a:last-child {
     margin-right: 0;
 }
-.parent--firefox .site-footer,
-.parent--mozilla .site-footer {
-    display: none;
-}
 .site-header {
     background: #000000;
     height: 70px;
@@ -7368,11 +7364,12 @@ body.error404 .site-header {
 }
 .site-header .mobile-sub-nav ul li a {
     display: block;
-    padding: 0 8px 5px;
+    padding: 2px 8px 3px;
     line-height: 32px;
 }
 .site-header .mobile-sub-nav ul li a.current {
     background: #fff;
+    color: #040404;
 }
 .site-header .mobile-sub-nav ul span.count {
     display: none;
@@ -7407,7 +7404,7 @@ body.error404 .site-header {
 .page-template-page-press-assets.mobile-menu-open .site-header .quick-links-toggle:after {
     background-image: url("../images/down-arrow-white.svg");
 }
-.mobile-interior-section-nav {
+.mobile-sub-nav {
     display: none;
 }
 @media (max-width: 1019px) {
@@ -7426,6 +7423,9 @@ body.error404 .site-header {
     position: relative;
 }
 @media (max-width: 1019px) {
+    .page-template-page-brand-landing .mobile-sub-nav {
+        display: block;
+    }
     .parent--firefox .mobile-interior-section-nav,
     .parent--mozilla .mobile-interior-section-nav {
         display: -webkit-box;
@@ -7528,6 +7528,7 @@ body.error404 .site-header {
     }
 }
 @media (max-width: 1019px) {
+    .page-template-page-brand-landing .mobile-sub-nav,
     .page-template-page-brand-landing.parent--firefox .mobile-interior-section-nav,
     .page-template-page-brand-landing.parent--mozilla .mobile-interior-section-nav {
         opacity: 0;
@@ -7538,6 +7539,7 @@ body.error404 .site-header {
     }
 }
 @media (max-width: 1019px) {
+    .page-template-page-brand-landing.has-scrolled .mobile-sub-nav,
     .page-template-page-brand-landing.parent--firefox.parent--firefox.has-scrolled .mobile-interior-section-nav,
     .page-template-page-brand-landing.parent--mozilla.parent--firefox.has-scrolled .mobile-interior-section-nav {
         opacity: 1;
@@ -7545,6 +7547,7 @@ body.error404 .site-header {
     }
 }
 @media (max-width: 1019px) {
+    .page-template-page-brand-landing.has-scrolled .mobile-sub-nav,
     .page-template-page-brand-landing.parent--firefox.parent--mozilla.has-scrolled .mobile-interior-section-nav,
     .page-template-page-brand-landing.parent--mozilla.parent--mozilla.has-scrolled .mobile-interior-section-nav {
         opacity: 1;
