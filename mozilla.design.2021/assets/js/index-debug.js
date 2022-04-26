@@ -298,15 +298,17 @@ var initNav = function initNav() {
   $('.quick-links-toggle').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('quick-links-open');
-    $('body').removeClass('mobile-menu-open', $('body').hasClass('quick-links-open'));
-    $('body').toggleClass('quick-links-closed', !$('body').hasClass('quick-links-open'));
+    setTimeout(function () {
+      $('body').removeClass('mobile-menu-open', $('body').hasClass('quick-links-open'));
+    }, 500);
   });
 
   var transitionBrand = function transitionBrand(hash) {
     $('body').removeClass('mobile-menu-open');
     var tl = new _TweenMax.TimelineLite();
+
     // tl.add(()=>{$(hash)[0].scrollIntoView(), 0});
-    tl.add(TweenLite.to($('.page-body, .brand-interactive'), .2, {
+    tl.add(TweenLite.to($('.page-body, .brand-interactive'), .5, {
       ease: _TweenMax.Power2.easeOut,
       opacity: 1
     }));
@@ -327,30 +329,35 @@ var initNav = function initNav() {
     window.location.href = chunks.join('/') + '/#' + hash;
     return false;
   });
-  
+
   function scrollToSection(hash) {
     $(hash)[0].scrollIntoView();
-    window.location.hash = hash;
+    // window.location.hash = hash;
+
+    $('.section-nav-menu-links a').removeClass('current');
+    $('.section-nav-menu-links li:eq('+$(hash).index()+') a').addClass('current');
+
     transitionBrand(hash);
   }
   
-  if (window.location.hash.length > 0) {
-    // $( window ).on( "load", function() {
+  if ($('body').hasClass('page-template-page-brand-landing')) {
+    if (window.location.hash.length > 0) {
+      $( window ).on( "load", function() {
+        scrollToSection(window.location.hash);
+      });
+    } else {
+      $('.page-body, .brand-interactive').css('opacity', 1);
+    }
+
+    $( window ).on( "hashchange", function() {
+      $('body').removeClass('mobile-menu-open');
       scrollToSection(window.location.hash);
-    // });
+    });
   }
-  
-  // $( window ).on( "hashchange", function() {
-  //   $('body').removeClass('mobile-menu-open');
-  //   scrollToSection(window.location.hash);
-  // });
   
   $('.section-nav-menu-links a').on('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-  
-      $('.section-nav-menu-links a').removeClass('current');
-      $(this).addClass('current');
   
       let chunks = $(this).attr('href').replace(/\/$/, "").split('/');
       const hash = chunks.pop();

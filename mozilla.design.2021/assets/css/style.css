@@ -6922,7 +6922,7 @@ code {
 }
 .page-template-page-brand-landing .page-body,
 .page-template-page-brand-landing .brand-interactive {
-    /* opacity: 0; */
+    opacity: 0;
 }
 .home .page-section--main {
     min-height: 100vh;
@@ -7334,6 +7334,7 @@ body.error404 .site-header {
     display: none;
 }
 .site-header .mobile-sub-nav .mobile-interior-section-nav {
+    background: rgba(0, 0, 0, 0.4);
     overflow-x: scroll;
     position: relative;
 }
@@ -7362,7 +7363,6 @@ body.error404 .site-header {
 .site-header .mobile-sub-nav ul li {
     margin: 0;
     padding: 0 16px;
-    background: rgba(0, 0, 0, 0.4);
 }
 .site-header .mobile-sub-nav ul li:last-child {
     padding-right: 50px;
@@ -8310,9 +8310,6 @@ body.error404 .site-header {
 }
 .quick-links-open {
     overflow: hidden;
-}
-.quick-links-closed .quick-links {
-    opacity: 1;
 }
 .quick-links-open .quick-links {
     -webkit-transform:  translateY(70px);
