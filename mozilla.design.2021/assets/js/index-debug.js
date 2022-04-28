@@ -308,63 +308,63 @@ var initNav = function initNav() {
     var tl = new _TweenMax.TimelineLite();
 
     // tl.add(()=>{$(hash)[0].scrollIntoView(), 0});
-    tl.add(TweenLite.to($('.page-body, .brand-interactive'), .5, {
-      ease: _TweenMax.Power2.easeOut,
-      opacity: 1
-    }));
-    tl.add(TweenLite.from($(hash), 1, {
-      ease: _TweenMax.Power2.easeOut,
+    // tl.add(TweenLite.to($('.page-body, .brand-interactive'), .5, {
+    //   ease: _TweenMax.Power2.easeOut,
+    //   opacity: 1
+    // }));
+    tl.add(TweenLite.fromTo($(hash), .5, {
       opacity: 0,
-      y: '50vh'
+      transform: 'translateY(10vh)',
+    }, {
+      ease: _TweenMax.Power2.easeOut,
+      opacity: 1,
+      transform: 'translateY(0)',
     }));
     tl.play();
   };
   
-  $('.mobile-nav .sub-menu a').on('click', function(e) {
+  $('.mobile-nav .sub-menu a, .section-nav-menu-links a').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    let link = $(this).attr('href');
-    let chunks = link.replace(/\/$/, "").split('/');
+
+    let chunks = $(this).attr('href').replace(/\/$/, "").split('/');
     const hash = chunks.pop();
-    window.location.href = chunks.join('/') + '/#' + hash;
+
+    window.location.href = chunks .join('/') + '/#' + hash;
     return false;
   });
 
-  function scrollToSection(hash) {
-    $(hash)[0].scrollIntoView();
-    // window.location.hash = hash;
+  function scrollToSection(hash = '') {
+    $('body').removeClass('brand-loaded');
 
-    $('.section-nav-menu-links a').removeClass('current');
-    $('.section-nav-menu-links li:eq('+$(hash).index()+') a').addClass('current');
+    let chkReadyState = setInterval(function() {
+      if (document.readyState == "complete") {
+          clearInterval(chkReadyState);
 
-    transitionBrand(hash);
+          $('body').addClass('brand-loaded');
+          
+          if (hash.length > 0) {
+            $(hash)[0].scrollIntoView();
+
+            $('.section-nav-menu-links').each(function(i, menu) {
+              $(menu).find('a').removeClass('current');
+              $(menu).find('li:eq('+$(hash).index()+') a').addClass('current');
+            })
+
+            transitionBrand(hash);
+          }
+      }
+    }, 100);
   }
   
   if ($('body').hasClass('page-template-page-brand-landing')) {
-    if (window.location.hash.length > 0) {
-      $( window ).on( "load", function() {
-        scrollToSection(window.location.hash);
-      });
-    } else {
-      $('.page-body, .brand-interactive').css('opacity', 1);
-    }
+    scrollToSection(window.location.hash);
 
     $( window ).on( "hashchange", function() {
       $('body').removeClass('mobile-menu-open');
       scrollToSection(window.location.hash);
     });
   }
-  
-  $('.section-nav-menu-links a').on('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-  
-      let chunks = $(this).attr('href').replace(/\/$/, "").split('/');
-      const hash = chunks.pop();
-  
-      // Scroll  to hash
-      scrollToSection('#' + hash);
-  });
   
   //   $(window).scroll(function(){
   //     // This is then function used to detect if the element is scrolled into view

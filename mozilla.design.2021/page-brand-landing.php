@@ -52,12 +52,14 @@ while ( have_posts() ) :
   the_content();
 
   foreach ($page_children as $child):
+    setup_postdata($child);
 ?>
   <section class="brand-page-section" id="<?php echo $child->post_name ?>">
-    <?php echo get_the_content(null, false, $child); ?>
+    <?php the_content(); ?>
   </section>
 <?php 
   endforeach;
+  wp_reset_postdata();
 endwhile; // End of the loop.
 ?>
         </div>

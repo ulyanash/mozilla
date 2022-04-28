@@ -6924,6 +6924,10 @@ code {
 .page-template-page-brand-landing .brand-interactive {
     opacity: 0;
 }
+.page-template-page-brand-landing.brand-loaded .page-body,
+.page-template-page-brand-landing.brand-loaded .brand-interactive {
+    opacity: 1;
+}
 .home .page-section--main {
     min-height: 100vh;
 }
